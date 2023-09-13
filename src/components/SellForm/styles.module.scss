@@ -1,0 +1,215 @@
+.SellForm {
+  max-width: 776px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 60px;
+  background: white;
+  .successMessage {
+    .thankContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        width: 100%;
+        display: block;
+        text-transform: capitalize;
+        color: white;
+        text-align: center;
+        background-color: #ef9725;
+        padding: 0px 50px;
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 48px;
+        text-decoration: unset;
+      }
+      h6 {
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: black;
+        text-align: start;
+        margin: 30px 0;
+        font-weight: 600;
+      }
+    }
+  }
+  .inputs {
+    margin-bottom: 0 !important;
+  }
+  .nameContainer {
+    display: flex;
+    justify-content: space-between;
+    .nameInput,
+    .surnameInput {
+      width: 47%;
+    }
+  }
+  &.secondStep {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 148%;
+    text-align: center;
+    color: white;
+  }
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 32px;
+    .step {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-weight: 300;
+      font-size: 33px;
+      line-height: 148%;
+      font-family: 'Montserrat', sans-serif;
+      color: #4d4d4d;
+      user-select: none;
+      &.active {
+        font-weight: bold;
+      }
+      &.finished {
+        opacity: 1;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 6px;
+      }
+    }
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+    .error {
+      color: red;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .SellForm {
+    padding: 50px;
+    border-radius: 12px;
+    margin: auto;
+    &.secondStep {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    h2 {
+      height: 33px;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+    }
+    .steps {
+      margin-bottom: 14px;
+    }
+    .inputs {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .SellForm {
+    max-width: 776px;
+    padding-top: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    background: white;
+    .inputs {
+      margin-bottom: 0 !important;
+    }
+    .nameContainer {
+      display: flex;
+      justify-content: space-between;
+      .nameInput,
+      .surnameInput {
+        width: 47%;
+      }
+    }
+    &.secondStep {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 32px;
+      .step {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 148%;
+        font-family: 'Montserrat', sans-serif;
+        color: #4d4d4d;
+        user-select: none;
+        &.active {
+          font-weight: bold;
+        }
+        &.finished {
+          opacity: 1;
+          &::after {
+            background-color: #ef5225;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          border-radius: 6px;
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+      .error {
+        color: red;
+      }
+    }
+    .imagesContainer {
+      margin-bottom: 0px;
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

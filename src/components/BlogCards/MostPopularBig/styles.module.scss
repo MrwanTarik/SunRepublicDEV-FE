@@ -1,0 +1,57 @@
+.MostPopularBig {
+  max-width: 566px;
+  .imageContainer {
+    width: 100%;
+    max-width: 566px;
+    height: 393px;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 48px;
+  }
+
+  .description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .MostPopularBig {
+    width: 100%;
+    max-width: unset;
+    .imageContainer {
+      max-width: unset;
+      height: unset;
+      aspect-ratio: 387 / 252;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

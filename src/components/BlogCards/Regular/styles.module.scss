@@ -1,0 +1,51 @@
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.Regular {
+  max-width: 400px;
+  .imageContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 277px;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 43px;
+  }
+}
+
+@media (max-width: 1024px) {
+  a {
+    width: 100%;
+  }
+  .Regular {
+    width: 100% !important;
+    max-width: unset;
+    .imageContainer {
+      max-width: unset;
+      height: auto;
+      aspect-ratio: 387 / 252;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

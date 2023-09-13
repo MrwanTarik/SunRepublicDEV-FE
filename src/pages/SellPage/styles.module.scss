@@ -1,0 +1,212 @@
+.SellPage {
+  padding-top: 160px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/SellHeader.jpg');
+  padding-bottom: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .leftBox {
+      padding-top: 100px;
+      width: 47%;
+      h1 {
+        font-size: 62px;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: white;
+        span {
+          color: #ef9725;
+        }
+      }
+
+      p {
+        font-size: 21px;
+        color: #e6e6e6;
+        width: 80%;
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        &:first-of-type {
+          margin: 20px 0;
+        }
+      }
+      .dial {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0px 0;
+        align-items: flex-start;
+        a {
+          padding: 10px 25px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: bold;
+          font-size: 21px;
+          background-color: white;
+          border-radius: 100px;
+          display: inline-block;
+          height: 45px;
+        }
+        p {
+          color: #e6e6e6;
+          font-size: 21px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .rightBox {
+      width: 49%;
+    }
+  }
+}
+@media (max-width: 1350px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1026px) {
+  .SellPage {
+    padding-top: 120px;
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .leftBox {
+        padding-top: 0;
+        width: 100%;
+        h1 {
+          font-size: 70px;
+          margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-align: center;
+          color: white;
+          span {
+            color: #ef9725;
+          }
+        }
+
+        p {
+          font-size: 21px;
+          color: #e6e6e6;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          max-width: 400px;
+          text-align: center;
+          margin: auto;
+          &:first-of-type {
+            margin: 20px auto;
+          }
+        }
+        .dial {
+          display: flex;
+          flex-direction: column;
+          margin: 30px 0px 0;
+          align-items: flex-start;
+          a {
+            padding: 10px 25px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: bold;
+            font-size: 21px;
+            max-width: 250px;
+            margin: auto;
+            background-color: white;
+            border-radius: 100px;
+            display: inline-block;
+            height: 45px;
+          }
+          p {
+            color: #e6e6e6;
+            font-size: 21px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .rightBox {
+        width:100%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .SellPage {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .leftBox {
+        padding-top: 0;
+        width: 100%;
+        h1 {
+          font-size: 40px;
+          margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-align: center;
+          color: white;
+          span {
+            color: #ef9725;
+          }
+        }
+
+        p {
+          font-size: 17px;
+          color: #e6e6e6;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          max-width: 400px;
+          text-align: center;
+          margin: auto;
+          &:first-of-type {
+            margin: 20px auto;
+          }
+        }
+        .dial {
+          display: flex;
+          flex-direction: column;
+          margin: 30px 0px 0;
+          align-items: flex-start;
+          a {
+            padding: 10px 25px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            max-width: 250px;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 100px;
+            display: inline-block;
+            height: 45px;
+          }
+          p {
+            color: #e6e6e6;
+            font-size: 17px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .rightBox {
+        width:100%;
+      }
+    }
+  }
+}

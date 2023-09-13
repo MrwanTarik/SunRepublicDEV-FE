@@ -1,0 +1,64 @@
+.countryButton {
+  background-color: transparent !important;
+  border: none !important;
+
+  .flag {
+    left: 17px;
+    top: 50% !important;
+    .arrow {
+      position: relative;
+      top: 1px;
+      width: 18px;
+      height: 10px;
+      border: none !important;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94473 9.50005C8.75325 9.50005 8.56159 9.42673 8.4154 9.2803L0.9284 1.7803C0.635846 1.48723 0.635846 1.01267 0.9284 0.719797C1.22095 0.426922 1.69469 0.426734 1.98706 0.719797L8.94473 7.68955L15.9024 0.719797C16.195 0.426734 16.6687 0.426734 16.9611 0.719797C17.2534 1.01286 17.2536 1.48742 16.9611 1.7803L9.47406 9.2803C9.32788 9.42673 9.13621 9.50005 8.94473 9.50005Z' fill='black'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  & > div {
+    width: 10px !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+
+    & > div {
+      top: 17px !important;
+      bottom: unset !important;
+      width: 16px !important;
+    }
+    &:hover {
+      width: 10px !important;
+      background-color: transparent !important;
+    }
+  }
+}
+.react-tel-input .form-control {
+  padding-left: 60px;
+  height: 47px !important;
+}
+.input {
+  width: 100% !important;
+  font-family: 'Smooch Sans' !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  line-height: 148% !important;
+  color: #4d4d4d ;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  border-radius: 0 !important;
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &::placeholder {
+    color: white !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .input {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+}

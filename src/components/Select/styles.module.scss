@@ -1,0 +1,86 @@
+
+.Select {
+  position: relative;
+  width: 100%;
+
+  .label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    line-height: 148%;
+    color: #e6e6e6;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    user-select: none;
+  }
+
+  .selector {
+    padding:10px 10px 10px 40px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #999999;
+    font-weight: 300;
+    line-height: 148%;
+    color: rgba(0, 0, 0, 0.579);
+    font-family: 'Oxygen', sans-serif;
+    border-radius: 36px;
+    background-color: white;
+    background-image: url(../../assets/images/selectArrow.svg);
+    background-repeat: no-repeat;
+    background-position-y: 53%;
+    background-position-x: 14px;
+    user-select: none;
+    cursor: pointer;
+
+    &.open {
+      border-bottom: 2px solid #ef5225;
+    }
+  }
+
+  .options {
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 148%;
+    color: white;
+    background-color: #262626;
+    border-radius: 4px;
+
+    .option {
+      display: flex;
+      align-items: center;
+      height: 38px;
+      padding-left: 16px;
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #3e3e3e;
+        opacity: 1;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Select {
+    .label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    .selector {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

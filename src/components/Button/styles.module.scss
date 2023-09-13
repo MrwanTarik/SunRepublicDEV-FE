@@ -1,0 +1,25 @@
+.Button {
+  margin-top: 20px;
+  min-height: 46px;
+  max-height: 42px;
+  font-family: 'Smooch Sans';
+  font-weight: 600;
+  font-size: 24px;
+  width: 100%;
+  line-height: 148%;
+  font-family: 'Oxygen', sans-serif !important;
+  color: white;
+  // border-bottom-left-radius: 138px;
+  border-radius: 20px;
+    background: #00000082;
+    background-color: #ef9725;
+    // border-top-right-radius: 150px;
+    // border-bottom-right-radius: 150px;
+  border: none;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: auto;
+    opacity: 0.7;
+  }
+}

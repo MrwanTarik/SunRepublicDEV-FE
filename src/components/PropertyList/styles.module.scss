@@ -1,0 +1,59 @@
+.PropertyList {
+  flex: 1;
+  max-width: 1240px;
+  margin-bottom: 80px;
+  position: relative;
+  h2 {
+    span {
+      color: #ef9725;
+      font-family: 'Oxygen', sans-serif;
+      margin-left: 10px;
+    }
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 32px;
+    font-family: 'Oxygen', sans-serif;
+    align-items: center;
+    display: flex;
+    &::before {
+      content: '';
+      height: 2.5px;
+      width: 150px;
+      margin-right: 20px;
+      background-color: #f39a1f;
+    }
+  }
+
+  .listContainer {
+    // position: relative;
+    .arrowButton {
+      position: absolute;
+      top: 130px;
+      right: -40px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &.previous {
+        right: unset;
+        left: -40px;
+      }
+    }
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+    .inner {
+      // position: relative;
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      transition: all 0.2s;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  /*font-family: 'Smooch Sans', 'Alumni Sans', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+}
+

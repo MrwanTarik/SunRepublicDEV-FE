@@ -1,0 +1,30 @@
+.PhoneInput {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 148%;
+    font-family: 'Montserrat', sans-serif;
+    color: #4d4d4d;
+    
+  }
+  input {
+    border-radius: 20px !important;
+    background-color: #e6e6e6 !important;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .PhoneInput {
+    .label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

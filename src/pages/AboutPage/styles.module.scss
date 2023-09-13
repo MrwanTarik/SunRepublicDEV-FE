@@ -1,0 +1,668 @@
+.WhatWeSellPage {
+  .searchContainer {
+    top: 0;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../assets/images/header.jpg);
+    background-size: cover;
+    border: 1px solid transparent;
+    .container {
+      flex: 1;
+      max-width: 1240px;
+      margin: auto;
+      h1 {
+        margin: 0;
+        padding-left: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 86px;
+        line-height: 120px;
+        color: white;
+        span {
+          color: #ef9725;
+        }
+      }
+      .text {
+        position: relative;
+        max-width: 686px;
+        p {
+          max-width: 686px;
+          margin: 0;
+          font-family: 'Oxygen', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21px;
+          color: #e6e6e6;
+          line-height: 1.5;
+          margin-top: 30px;
+          margin-left: 15px;
+        }
+      }
+      .dial {
+        display: flex;
+        margin: 25px 15px 40px;
+        align-items: center;
+        a {
+          padding: 10px 25px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: bold;
+          font-size: 21px;
+          background-color: white;
+          border-radius: 100px;
+          display: inline-block;
+          height: 45px;
+        }
+        p {
+          color: white;
+          margin-left: 50px;
+          font-size: 21px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.northenCyprus {
+  .container {
+    max-width: 1240px;
+    margin: auto;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    .northenCyprusContent {
+      width: 56%;
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: flex;
+          gap: 16px;
+          font-size: 24px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          .icon {
+            min-width: 35px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(../../assets/images/about/7.png);
+          }
+        }
+      }
+      h2 {
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+        font-size: 50px;
+        line-height: 77px;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 12px;
+          color: #ef9725;
+        }
+        &::before {
+          content: '';
+          height: 2.5px;
+          width: 150px;
+          margin-right: 20px;
+          background-color: #f39a1f;
+          display: inline-block;
+        }
+      }
+      p {
+        margin: 0 0 5px 0;
+        font-size: 19px;
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        text-indent: 20px;
+      }
+    }
+    .northenCyprusImages {
+      margin-top: 30px;
+      max-height: 511px;
+      width: 40%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.serviceWeProvide {
+  margin-top: 30px;
+  .container {
+    max-width: 1240px;
+    margin: auto;
+    .joinCommunity {
+      font-size: 24px;
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 400;
+      margin-bottom: 50px;
+      margin-left: 51px;
+    }
+    .serviceHeader {
+      .zr {
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          width: 27%;
+          height: 4px;
+          color: #ef9725;
+          background-color: #a4a4a4;
+        }
+        h2 {
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          margin: 0;
+          text-transform: capitalize;
+          color: #f39a1f;
+          font-size: 50px;
+          width: 45%;
+          text-align: center;
+        }
+      }
+      .about {
+        max-width: 1240px;
+        margin-bottom: 68px;
+        margin-left: auto;
+        margin-right: auto;
+        ul {
+          li {
+            p {
+              font-family: 'Oxygen', sans-serif;
+              font-weight: 300;
+            }
+          }
+        }
+        h2 {
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 300;
+          margin: 0;
+          margin-bottom: 24px;
+          font-size: 36px;
+          line-height: 77px;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: '';
+            height: 2.5px;
+            width: 100px;
+            margin-right: 20px;
+            background-color: #f39a1f;
+            display: inline-block;
+          }
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 20px;
+          row-gap: 49px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            display: flex;
+            align-items: start;
+            gap: 24px;
+            width: calc((100% - 40px) / 3);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 29px;
+            .icon {
+              min-width: 80px;
+              height: 80px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              &.first {
+                background-image: url(../../assets/images/InspectionTours.png);
+              }
+              &.second {
+                background-image: url(../../assets/images/PropetyLandSales.png);
+              }
+              &.third {
+                background-image: url(../../assets/images/Resale&Rental.png);
+              }
+              &.fourth {
+                background-image: url(../../assets/images/LawyerServices.png);
+              }
+              &.fifth {
+                background-image: url(../../assets/images/CarSales&Rentals.png);
+              }
+              &.sixth {
+                background-image: url(../../assets/images/AfterSalesSupport.png);
+              }
+            }
+            h3 {
+              margin: 0;
+              font-size: 27px;
+              font-family: 'Oxygen', sans-serif;
+              font-weight: 700;
+            }
+            p {
+              margin: 8px 0 0;
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.askedQuestions {
+  margin-top: 70px;
+  .container {
+    max-width: 1240px;
+    margin: auto;
+    h2 {
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 400;
+      margin: 0;
+      text-transform: capitalize;
+      margin-bottom: 24px;
+      font-size: 50px;
+      line-height: 77px;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: '';
+        height: 2.5px;
+        width: 150px;
+        margin-right: 20px;
+        background-color: #f39a1f;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .joinCommunity {
+    font-size: 18px !important;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-left: 69px !important;
+  }
+  .sliderImgs {
+    display: none;
+  }
+  .northenCyprus {
+    .container {
+      max-width: 1240px;
+      margin: 0 20px !important;
+      align-items: center;
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      .northenCyprusContent {
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          row-gap: 15px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            display: flex;
+            gap: 16px;
+            font-size: 18px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            .icon {
+              min-width: 35px;
+              height: 35px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-image: url(../../assets/images/about/7.png);
+            }
+          }
+        }
+        h2 {
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          margin: 0;
+          margin-bottom: 24px;
+          font-size: 35px !important;
+          line-height: 77px;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: '';
+            height: 2.5px;
+            width: 150px;
+            margin-right: 20px;
+            background-color: #f39a1f;
+            display: inline-block;
+          }
+        }
+        p {
+          margin: 0 0 5px 0;
+          font-size: 16px !important;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          text-indent: 20px;
+        }
+      }
+      .northenCyprusImages {
+        width: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .serviceWeProvide {
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      .serviceHeader {
+        .about {
+          h2 {
+            justify-content: center;
+          }
+          ul {
+            padding: 0 15px;
+            li {
+              width: 48%;
+            }
+          }
+        }
+        .reasons {
+          margin-bottom: 30px;
+          padding-left: 20px;
+          padding-right: 20px;
+          h2 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 36px;
+          }
+          ul {
+            flex-direction: column;
+            li {
+              width: 100%;
+              div {
+                min-width: 60px;
+                width: 60px;
+                height: 60px;
+                background-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .dial {
+    a {
+      font-size: 17px !important;
+      height: unset !important;
+      padding: 10px 18px !important;
+      margin: 15px 0;
+      width: 200px;
+    }
+  }
+  .WhatWeSellPage {
+    min-height: unset;
+    .searchContainer {
+      top: 47px;
+      padding-top: 68px;
+      padding-left: 20px;
+      padding-right: 20px;
+      .container {
+        h1 {
+          text-align: center;
+          padding-left: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 36px;
+        }
+        .text {
+          max-width: 500px;
+          margin: auto;
+          padding-top: 15px;
+          text-align: center;
+          .background {
+            filter: blur(39px);
+          }
+          p {
+            font-size: 16px;
+            &.visible {
+              top: 15px;
+              left: 0px;
+            }
+          }
+        }
+        .dial {
+          margin: 30px 15px 0;
+          justify-content: center;
+          a {
+            width: 250px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .joinCommunity {
+    font-size: 14px !important;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-left: 57px !important;
+  }
+  .askedQuestions {
+    margin-top: 50px;
+    .container {
+      h2 {
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+        font-size: 25px !important;
+        line-height: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+          display: none !important;
+          content: '';
+          height: 2.5px;
+          width: 150px;
+          margin-right: 20px;
+          background-color: #f39a1f;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .serviceWeProvide {
+    .container {
+      .serviceHeader {
+        .zr {
+          span {
+            display: none;
+          }
+          h2 {
+            font-size: 25px !important;
+            width: 100%;
+          }
+        }
+        .about {
+          h2 {
+            &::before {
+              display: none;
+            }
+          }
+          ul {
+            li {
+              width: 100%;
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+              h3 {
+                font-size: 25px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  p {
+    font-size: 14px !important;
+  }
+  .dial {
+    flex-direction: column;
+    margin: 0px 15px 0 !important;
+    a {
+      font-size: 14px !important;
+      height: unset !important;
+      padding: 10px 18px !important;
+      margin: 15px 0;
+      width: 200px;
+    }
+    p {
+      font-size: 14px !important;
+      margin: 0px !important;
+    }
+  }
+  .northenCyprus {
+    .container {
+      max-width: 1240px;
+      margin: 0 20px !important;
+      align-items: center;
+      padding: 15px !important;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      .northenCyprusContent {
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          row-gap: 15px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            .icon {
+              min-width: 25px;
+              height: 25px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-image: url(../../assets/images/about/7.png);
+            }
+          }
+        }
+        h2 {
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          margin: 0;
+          margin-bottom: 24px;
+          font-size: 22px !important;
+          line-height: 77px;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: '';
+            height: 2.5px;
+            width: 60px;
+            margin-right: 20px;
+            background-color: #f39a1f;
+            display: inline-block;
+          }
+        }
+        p {
+          margin: 0 0 5px 0;
+          font-size: 14px !important;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          text-indent: 20px;
+        }
+      }
+      .northenCyprusImages {
+        width: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.northenCyprus {
+  .container {
+    padding-top: 50px !important;
+  }
+}
+
+.WhatWeSellPage {
+  .searchContainer {
+    padding-bottom: 20px;
+    .text {
+      padding-top: 5px !important;
+      p {
+        margin-top: 5px !important;
+      }
+    }
+  }
+}

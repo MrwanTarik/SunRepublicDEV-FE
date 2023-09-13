@@ -1,0 +1,100 @@
+.Map {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  max-width: 1080px;
+  aspect-ratio: 587 / 482;
+  margin-bottom: 60px;
+  font-size: 48px;
+  background-color: lightgray;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .svgMap {
+    transform: scale(1.15) translate(-10px);
+    width: 100%;
+    height: 120%;
+
+    g {
+      transform-origin: center center;
+      transition: transform 0.15s;
+      cursor: pointer;
+
+      &.famagusta {
+        &.hovered {
+          transform: scale(1.2) translate(-30px, -30px);
+        }
+      }
+
+      &.kyrenia {
+        &.hovered {
+          transform: scale(1.15) translate(150px, -10px);
+        }
+      }
+
+      &.nicosia {
+        &.hovered {
+          transform: scale(1.1) translate(40px, -40px);
+        }
+      }
+
+      &.iskele {
+        &.hovered {
+          transform: scale(1.1) translate(-60px, 10px);
+        }
+      }
+    }
+
+    .st2 {
+      fill: #dbc000;
+      stroke: white;
+      stroke-width: 15px;
+    }
+    .st3 {
+      fill: #757575;
+      stroke: white;
+      stroke-width: 15px;
+      transform: translate(-15px, 7px);
+    }
+    .st4 {
+      fill: #005a8f;
+      stroke: white;
+      stroke-width: 15px;
+      transform: translate(5px, 15px);
+    }
+    .st5 {
+      fill: #008c85;
+      stroke: white;
+      stroke-width: 15px;
+      transform: translate(7px);
+    }
+    .st6 {
+      font-family: 'SanFrancisco-Black';
+      fill: white;
+    }
+    .st7 {
+      font-size: 174.4909px;
+    }
+    .st8 {
+      font-size: 103.4986px;
+    }
+    .st9 {
+      font-size: 78.6132px;
+    }
+    .st10 {
+      font-size: 117.7699px;
+    }
+
+    text {
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Map {
+    max-width: unset;
+    margin-bottom: 30px;
+  }
+}

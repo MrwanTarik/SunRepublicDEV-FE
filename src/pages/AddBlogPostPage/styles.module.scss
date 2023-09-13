@@ -1,0 +1,46 @@
+.AddBlogPostPage {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 182px);
+  padding-top: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  .container {
+    flex: 1;
+    max-width: 1240px;
+    padding-bottom: 50px;
+
+    .passwordForm {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      height: 42px;
+      padding-top: 45px;
+
+      label {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        input {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .inputs {
+      display: flex;
+      gap: 20px;
+
+      input {
+        margin-left: 5px;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 25px;
+    }
+  }
+}

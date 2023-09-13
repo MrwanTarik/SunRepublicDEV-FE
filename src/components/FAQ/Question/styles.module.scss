@@ -1,0 +1,100 @@
+.Question {
+  width: 49%;
+  .question {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 15px 15px 10px;
+    color: black;
+    background-color: #dddddd78;
+    border-left: 8px solid #ef9725;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: 'Q.';
+      font-size: 50px;
+      font-weight: 400;
+      color: #ef9725;
+      display: inline-block;
+      font-family: 'Oxygen', sans-serif;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+  }
+
+  .answer {
+    position: relative;
+    padding-bottom: 17px;
+    display: flex;
+    padding-left: 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: 300;
+    white-space: pre-line;
+    cursor: pointer;
+    &::before {
+      content: 'A.';
+      font-size: 50px;
+      font-weight: 400;
+      color: #b5b5b5;
+      display: inline-block;
+      font-family: 'Oxygen', sans-serif;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Question {
+    width: 100%;
+    .question {
+      padding-bottom: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 8px;
+      line-height: 24px;
+    }
+
+    .answer {
+      font-size: 16px;
+    }
+  }
+}
+@media(max-width:500px) {
+  .Question {
+    width: 100%;
+    .question {
+      padding-bottom: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      &::before {
+        content: 'Q.';
+        font-size: 40px;
+        font-weight: 400;
+        color: #ef9725;
+        display: inline-block;
+        font-family: 'Oxygen', sans-serif;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+
+    .answer {
+      font-size: 14px;
+      &::before {
+        content: 'A.';
+        font-size: 40px;
+        font-weight: 400;
+        color: #b5b5b5;
+        display: inline-block;
+        font-family: 'Oxygen', sans-serif;
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

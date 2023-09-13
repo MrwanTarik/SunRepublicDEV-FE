@@ -1,0 +1,344 @@
+.propertyTourPage {
+  .container {
+    // padding-left: 100px;
+    // padding-right: 100px;
+
+    .content {
+      margin: 0 auto;
+      max-width: 1240px;
+      flex: 1;
+      padding-top: 30px;
+
+      h1.mainHeading {
+        margin: 0;
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 77px;
+      }
+
+      .features {
+        display: flex;
+        img {
+          width: 34px;
+          height: 34px;
+          margin: 7px;
+        }
+      }
+      .whyus_heading {
+        text-align: center;
+      }
+      .whyus {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        .whyus__element {
+          display: flex;
+          img {
+            width: 34px;
+            height: 34px;
+            margin: 8px;
+          }
+        }
+      }
+      .fullSupport_heading {
+        text-align: center;
+      }
+      .fullSupport {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 35px;
+        .fullSupport__element {
+          display: flex;
+          padding-left: 30px;
+          img {
+            width: 34px;
+            height: 34px;
+            margin: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .propertyTourPage {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+      .content {
+        padding-top: 30px;
+        h1.mainHeading {
+          font-size: 24px;
+          text-align: center;
+        }
+        .whyus {
+          grid-template-columns: 1fr;
+        }
+        .fullSupport {
+          font-size: smaller;
+          grid-template-columns: 1fr;
+          .fullSupport__element {
+            padding-left: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ContactUsPage {
+  min-height: calc(100vh - 182px);
+  padding-bottom: 30px;
+
+  .emptySpace {
+    height: 408px;
+  }
+
+  .forms {
+    // position: absolute;
+    // top: 310px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .form,
+    .contactInfo {
+      flex: 1;
+      max-width: 520px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 32px;
+      padding-left: 64px;
+      padding-right: 64px;
+      padding-bottom: 64px;
+
+      h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 148%;
+        color: white;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-bottom: 45px;
+
+        .error {
+          color: red;
+        }
+      }
+    }
+
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 32px;
+      padding-left: 100px;
+      padding-right: 100px;
+
+      h2 {
+        margin: 0;
+        margin-bottom: 69px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 148%;
+        color: white;
+      }
+
+      .social {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 50px;
+
+        div {
+          cursor: pointer;
+        }
+
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .phoneNumbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 19px;
+        width: 100%;
+
+        .phone {
+          width: 180px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 148%;
+          color: white;
+          text-decoration: none;
+          text-align: right;
+          background-image: url(../../assets/images/phone.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    .team {
+      margin-top: 320px;
+      max-width: 1080px;
+      padding-bottom: 52px;
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        column-gap: 77px;
+        row-gap: 37px;
+        list-style: none;
+
+        li {
+          width: calc((100% - 154px) / 3);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .ContactUsPage {
+    min-height: unset;
+
+    .emptySpace {
+      height: 782px;
+    }
+
+    .forms {
+      top: 75px;
+      display: block;
+      padding: 40px;
+      .form,
+      .contactInfo {
+        max-width: unset;
+      }
+
+      .form {
+        margin-bottom: 20px;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+
+        h2 {
+          //width: 178px;
+          margin-bottom: 20px;
+          font-weight: 600;
+          font-size: 34px;
+          line-height: 41px;
+          text-align: center;
+        }
+
+        .inputs {
+          margin-bottom: 20px;
+        }
+      }
+
+      .contactInfo {
+        padding-top: 40px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 49px;
+
+        h2 {
+          margin-bottom: 20px;
+          font-weight: 600;
+          font-size: 34px;
+          line-height: 41px;
+        }
+
+        .social {
+          width: 150px;
+
+          a {
+            width: unset;
+          }
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .phoneNumbers {
+          gap: 10px;
+          .phone {
+            width: 190px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 148%;
+            background-size: 20px;
+            text-align: right;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+      .team {
+        margin-top: 0;
+        margin-bottom: -30px;
+        padding-top: 780px;
+        h2 {
+          margin-bottom: 20px;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 36px;
+          text-align: center;
+        }
+
+        ul {
+          gap: 15px;
+
+          li {
+            width: calc((100% - 15px) / 2);
+          }
+        }
+      }
+    }
+  }
+}

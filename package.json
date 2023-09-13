@@ -1,0 +1,88 @@
+{
+  "name": "sun-repbulic",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
+    "axios": "^0.27.2",
+    "classnames": "^2.2.6",
+    "compressorjs": "^1.1.1",
+    "formik": "^2.2.9",
+    "i18next": "^19.8.4",
+    "moment": "^2.29.1",
+    "nanoid": "^4.0.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.10.1",
+    "react-intersection-observer": "^9.4.1",
+    "react-items-carousel": "^2.8.0",
+    "react-light-accordion": "^0.1.4",
+    "react-multi-clamp": "^2.0.5",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.2.3",
+    "react-query": "^3.39.1",
+    "react-responsive": "^9.0.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^9.0.8",
+    "striptags": "^3.2.0",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "locales:extract": "i18next 'src/**/*.{js,jsx}'",
+    "lint": "eslint ./ --ext js,jsx",
+    "lint:fix": "eslint ./ --ext js,jsx --fix"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.7",
+    "i18next-parser": "^3.6.0",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --ext js,jsx --fix --ignore-pattern",
+      "git add"
+    ]
+  }
+}

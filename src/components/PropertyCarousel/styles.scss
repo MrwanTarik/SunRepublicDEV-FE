@@ -1,0 +1,22 @@
+.itemWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.leftChevron,
+.rightChevron {
+  button {
+    position: relative;
+    right: -15px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.leftChevron {
+  .chevronButton {
+    left: -15px;
+  }
+}

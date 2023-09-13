@@ -1,0 +1,110 @@
+.Property {
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  &:hover { 
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  .price {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      left: 50%;
+      color: white;
+      background: #00000082;
+       font-family: 'Oxygen', sans-serif;
+       font-weight: bold;
+       font-size: 25px;
+       width: max-content;
+      border-radius: 50px;
+      padding: 6px 14px;
+      z-index: 2;
+      transform: translateX(-50%);
+      top: -17px;
+      img {
+        padding-right: 5px;
+        width: 25px;
+        transform: scale(1) !important;
+      }
+    }
+  header {
+    position: relative;
+    width: 100%;
+    height: 278px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    overflow: hidden;
+    &:hover img {
+      transform: scale(1.4);
+      transition: all 0.8s ease-in-out;
+    }
+    &:hover::after{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+      transition: all 0.8s ease-in-out;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60));
+      transition: all 0.8s ease-in-out;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.4);
+        transition: all 0.8s ease-in-out;
+      }
+    }
+    
+    button {
+      text-align: start;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      z-index: 2;
+      cursor: pointer;
+      position: absolute;
+      font-family: 'Oxygen', sans-serif;
+      p {
+        display: flex;
+        align-items: center;
+        color: #ef9725;
+        margin-left: 7px;
+      }
+      svg {
+        transform: rotate(180deg);
+        font-size: 35px;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 17px;
+    line-height: 32px;
+    overflow: hidden;
+    &::before {
+      display: none;
+    }
+  }
+
+  .description {
+    margin: 0;
+    font-weight: 400;
+    padding: 10px;
+    font-size: 23px;
+    line-height: 29px;
+    font-family: 'Oxygen', sans-serif;
+  }
+}

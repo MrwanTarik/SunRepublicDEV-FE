@@ -1,0 +1,84 @@
+.TextInput {
+  .label {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 148%;
+    font-family: 'Montserrat', sans-serif;
+    color: #4d4d4d;
+  }
+  textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    height: 170px;
+    border: none;
+    width: 100%;
+    font-weight: 300;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-bottom-left-radius: 138px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    border: none;
+    width: 100%;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 46px;
+    max-height: 42px;
+    background-color: #e6e6e6;
+    color: #4d4d4d;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.579);
+      opacity: 1;
+    }
+  }
+  .titleInputStyle {
+  }
+  .descriptionInputStyle {
+    min-height: 157px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .TextInput {
+    .label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    input {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .TextInput {
+    .label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    input {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

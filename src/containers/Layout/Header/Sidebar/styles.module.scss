@@ -1,0 +1,75 @@
+.backdrop {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &.show {
+    display: block;
+  }
+}
+
+.Sidebar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -220px;
+  bottom: 0;
+  width: 220px;
+  background-color: black;
+  transition: right 0.1s;
+
+  &.show {
+    right: 0;
+  }
+
+  .navigationMenu {
+    padding-top: 48px;
+    padding-left: 20px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          padding-bottom: 4px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 148%;
+          color: white;
+          opacity: 0.65;
+
+          &.link {
+            opacity: 1;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &.active {
+            position: relative;
+            opacity: 1;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 30px;
+              height: 2px;
+              background-color: #ef9725;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

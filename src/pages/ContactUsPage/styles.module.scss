@@ -1,0 +1,567 @@
+.ContactUsPage {
+  padding-top: 160px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/contact-bg.jpg');
+  padding-bottom: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  textarea {
+    height: 85px;
+  }
+  .container {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .leftBox {
+      .contactSocials {
+        display: flex;
+        gap: 12px;
+        a {
+          width: auto;
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+      padding-top: 40px;
+      width: 45%;
+      h1 {
+        font-size: 70px;
+        margin: 0;
+        line-height: 1.2;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: white;
+        span {
+          color: #ef9725;
+        }
+      }
+      p {
+        font-size: 25px;
+        color: #e6e6e6;
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        max-width: 462px;
+        &:first-of-type {
+          margin: 10px 0;
+        }
+      }
+      .dial {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0px 0;
+        align-items: flex-start;
+        a {
+          padding: 10px 25px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: bold;
+          font-size: 21px;
+          background-color: white;
+          border-radius: 100px;
+          display: inline-block;
+          height: 45px;
+        }
+        p {
+          color: white;
+          font-size: 21px;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .contactAddress {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        p {
+          margin: 0;
+        }
+        img {
+          width: 60px;
+          height: 60px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .rightBox {
+      width: 49%;
+    }
+  }
+}
+
+.rightBox {
+  max-width: 776px;
+  padding-top: 55px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 60px;
+  background: white;
+  .successMessage {
+    .thankContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        width: 100%;
+        display: block;
+        text-transform: capitalize;
+        color: white;
+        text-align: center;
+        background-color: #ef9725;
+        padding: 0px 50px;
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 48px;
+        text-decoration: unset;
+      }
+      h6 {
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: black;
+        text-align: start;
+        margin: 30px 0;
+        font-weight: 600;
+      }
+    }
+  }
+  .inputs {
+    margin-bottom: 0 !important;
+  }
+  .nameContainer {
+    display: flex;
+    justify-content: space-between;
+    .nameInput,
+    .surnameInput {
+      width: 47%;
+    }
+  }
+  &.secondStep {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 148%;
+    text-align: center;
+    color: white;
+  }
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 32px;
+    .step {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-weight: 300;
+      font-size: 33px;
+      line-height: 148%;
+      font-family: 'Montserrat', sans-serif;
+      color: #4d4d4d;
+      user-select: none;
+      &.active {
+        font-weight: bold;
+      }
+      &.finished {
+        opacity: 1;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 6px;
+      }
+    }
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+    .error {
+      color: red;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+  .team {
+    padding-bottom: 100px;
+    .contactH {
+      margin: 70px 0 50px;
+      p {
+        margin: 0 0 0 170px;
+        color: #f39a1f;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      h2 {
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 300;
+        margin: 0;
+        font-size: 50px;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '';
+          height: 2.5px;
+          width: 150px;
+          margin-right: 20px;
+          background-color: #f39a1f;
+          display: inline-block;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      padding-left: 0;
+      flex-wrap: wrap;
+      gap: 27px;
+      list-style: none;
+      li {
+        width: 23%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .leftBox {
+    .contactSocials {
+      justify-content: center;
+    }
+    .contactAddress {
+      margin: 10px 0;
+      p {
+        margin: 0 !important;
+        text-align: start !important;
+      }
+      justify-content: center;
+    }
+  }
+  .rightBox {
+    padding: 50px;
+    border-radius: 12px;
+    margin: auto;
+    &.secondStep {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    h2 {
+      height: 33px;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+    }
+    .steps {
+      margin-bottom: 14px;
+    }
+    .inputs {
+      margin-bottom: 20px;
+    }
+  }
+  .container {
+    .team {
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      li {
+        width: 48% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .rightBox {
+    max-width: 776px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    background: white;
+    .inputs {
+      margin-bottom: 0 !important;
+    }
+    .nameContainer {
+      display: flex;
+      justify-content: space-between;
+      .nameInput,
+      .surnameInput {
+        width: 47%;
+      }
+    }
+    &.secondStep {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 32px;
+      .step {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 148%;
+        font-family: 'Montserrat', sans-serif;
+        color: #4d4d4d;
+        user-select: none;
+        &.active {
+          font-weight: bold;
+        }
+        &.finished {
+          opacity: 1;
+          &::after {
+            background-color: #ef5225;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          border-radius: 6px;
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+      .error {
+        color: red;
+      }
+    }
+    .imagesContainer {
+      margin-bottom: 0px;
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .container {
+    .team {
+      .contactH {
+        p {
+          margin: 0 0 0 103px;
+          color: #f39a1f;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        h2 {
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 300;
+          margin: 0;
+          font-size: 30px !important;
+          line-height: 35px;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: '';
+            height: 2.5px;
+            width: 80px !important;
+            margin-right: 20px;
+            background-color: #f39a1f;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      li {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1026px) {
+  .ContactUsPage {
+    padding-top: 120px;
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .leftBox {
+        padding-top: 0;
+        width: 100%;
+        h1 {
+          font-size: 70px;
+          margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-align: center;
+          color: white;
+          span {
+            color: #ef9725;
+          }
+        }
+        p {
+          font-size: 21px;
+          color: #e6e6e6;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          max-width: 400px;
+          text-align: center;
+          margin: auto;
+          &:first-of-type {
+            margin: 20px auto;
+          }
+        }
+        .dial {
+          display: flex;
+          flex-direction: column;
+          margin: 30px 0px 0;
+          align-items: flex-start;
+          a {
+            padding: 10px 25px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: bold;
+            font-size: 21px;
+            max-width: 250px;
+            margin: auto;
+            background-color: white;
+            border-radius: 100px;
+            display: inline-block;
+            height: 45px;
+          }
+          p {
+            color: white;
+            font-size: 21px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .rightBox {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .ContactUsPage {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .leftBox {
+        padding-top: 0;
+        width: 100%;
+        h1 {
+          font-size: 40px;
+          margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-align: center;
+          color: white;
+          span {
+            color: #ef9725;
+          }
+        }
+        p {
+          font-size: 17px;
+          color: #e6e6e6;
+          font-family: 'Oxygen', sans-serif;
+          font-weight: 400;
+          max-width: 400px;
+          text-align: center;
+          margin: auto;
+          &:first-of-type {
+            margin: 20px auto;
+          }
+        }
+        .dial {
+          display: flex;
+          flex-direction: column;
+          margin: 30px 0px 0;
+          align-items: flex-start;
+          a {
+            padding: 10px 25px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            max-width: 250px;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 100px;
+            display: inline-block;
+            height: 45px;
+          }
+          p {
+            color: white;
+            font-size: 17px;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .rightBox {
+        width: 100%;
+      }
+    }
+  }
+}
