@@ -423,8 +423,10 @@ a.active {
     font-size: 40px !important;
     margin-bottom: 10px !important;
   }
-  p {
-    font-size: 17px !important;
+  .WhatWeSellPage {
+    p {
+      font-size: 17px !important;
+    }
   }
 }
 
@@ -700,6 +702,9 @@ a.active {
 
 @media (max-width: 650px) {
   .about {
+    p {
+      font-size: 14px !important;
+    }
     h2 {
       padding: 0px 10px 30px;
       line-height: 50px;
@@ -734,9 +739,7 @@ a.active {
       }
     }
   }
-  p {
-    font-size: 14px !important;
-  }
+
   .dial {
     flex-direction: column;
     margin: 0px 15px 0 !important;

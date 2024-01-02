@@ -51,7 +51,7 @@
   "Enter your Email": "Enter your Email",
   "Tell more": "Tell more",
   "NEXT": "NEXT",
-  "SEND": "SEND",
+  "SEND": "Get a consultation",
   "Add photos": "Add photos",
   "Similar queries": "Similar queries",
   "MAKE A TOUR WITH US": "MAKE A TOUR WITH US",
@@ -303,5 +303,15 @@
   "DisclosureIncomeContent": "Because of sanctions and the lack of international recognition of the “TRNC,” the banking sector of Northern Cyprus is largely isolated from international ﬁnancial institutions. Banks operating in the area do not have access to the SWIFT system and have almost no correspondent banking relationships outside of Turkey.",
   "EverybodyWelcome": "Everybody is Welcome",
   "EverybodyWelcomeContent": "Nearly every passport in the world can enter North Cyprus with no advance visa required! Plus, in addition to this, nearly every national can buy property in the North of Cyprus.",
-  "Bookanow!": "Book a free property now!"
+  "Bookanow!": "Book a free property now!",
+  "heroHeader": "your real estate advisor in North Cyprus!",
+  "heroPara": "Leave a request and get up to 10 objects for your needs (apartments, apartments, villas) ",
+  "heroParaSpan": " from 80K GBP",
+  "icon-content1": "For living",
+  "icon-content2": "For investment",
+  "icon-content3": "With full legal support",
+  "comment": "Comment",
+  "heroContent1": "years of real estate experience",
+  "heroContent2": "satisfied customers",
+  "heroContent3": "real estate developers in the portfolio"
 }

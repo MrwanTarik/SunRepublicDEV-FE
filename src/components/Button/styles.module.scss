@@ -1,25 +1,22 @@
 .Button {
   margin-top: 20px;
-  min-height: 46px;
-  max-height: 42px;
-  font-family: 'Smooch Sans';
-  font-weight: 600;
-  font-size: 24px;
-  width: 100%;
-  line-height: 148%;
-  font-family: 'Oxygen', sans-serif !important;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  // border-bottom-left-radius: 138px;
-  border-radius: 20px;
-    background: #00000082;
-    background-color: #ef9725;
-    // border-top-right-radius: 150px;
-    // border-bottom-right-radius: 150px;
+  font-weight: 800;
+  line-height: 14px;
+  width: 100%;
+  border-radius: 45px;
+  background-color: #f26e21 !important;
   border: none;
   cursor: pointer;
+  opacity: 1;
 
   &.disabled {
     cursor: auto;
+    background-color: #f26e21 !important;
     opacity: 0.7;
   }
 }

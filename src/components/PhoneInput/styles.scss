@@ -36,29 +36,11 @@
   height: 47px !important;
 }
 .input {
-  width: 100% !important;
-  font-family: 'Smooch Sans' !important;
-  font-weight: 600 !important;
-  font-size: 22px !important;
-  line-height: 148% !important;
-  color: #4d4d4d ;
-  background-color: transparent !important;
-  border: none !important;
-  border-bottom: 1px solid #d9d9d9 !important;
-  border-radius: 0 !important;
-
   &:focus {
     outline: none !important;
   }
 
   &::placeholder {
     color: white !important;
-  }
-}
-
-@media (max-width: 1024px) {
-  .input {
-    font-size: 20px !important;
-    line-height: 24px !important;
   }
 }

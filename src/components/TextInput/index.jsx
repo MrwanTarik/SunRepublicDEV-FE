@@ -26,6 +26,8 @@ export default function TextInput({
       <span className={classes.label}>{label}</span>
       {descriptionInputStyle ? (
         <textarea
+          className="text-[#222] text-[14px] font-medium leading-[20px] capitalize"
+          placeholder={placeholder}
           style={{ resize: 'none' }}
           name={name}
           onBlur={onBlur}
@@ -36,7 +38,7 @@ export default function TextInput({
         <input
           style={{ background: `${bg}`, fontSize: `${fs}` }}
           type="text"
-          className={getInputClassNames()}
+          className={`${getInputClassNames()} text-[#222] text-[14px] font-medium leading-[20px] capitalize`}
           placeholder={placeholder}
           name={name}
           onBlur={onBlur}

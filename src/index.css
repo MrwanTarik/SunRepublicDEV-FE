@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +15,17 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
-  /*font-family: 'Smooch Sans', 'Alumni Sans', sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2b2724;
 }
-
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1350px) {
+  .container {
+    padding: 0 20px;
+  }
+}
