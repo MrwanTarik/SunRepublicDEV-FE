@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
-
+import MobileBg from '../../../../assets/images/mobile-bg.png';
 import { NavLink } from 'react-router-dom';
-
-import { t } from '../../../../i18n';
+import i18n, { t } from '../../../../i18n';
 import classes from './styles.module.scss';
 
 export default function Sidebar({ show, handleClose }) {

@@ -1,47 +1,47 @@
 .TextInput {
-  .label {
-    margin-bottom: 8px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 148%;
-    font-family: 'Montserrat', sans-serif;
-    color: #4d4d4d;
-  }
   textarea {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    height: 170px;
-    border: none;
+    font-size: 14px;
+    height: 130px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
     width: 100%;
-    font-weight: 300;
-    padding: 10px;
-    background-color: #e6e6e6;
-    border-bottom-left-radius: 138px;
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 15px 20px;
+    color: #222;
+    opacity: 1;
+    border-radius: 0px 90px 90px 90px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: linear-gradient(
+      109deg,
+      rgba(201, 201, 201, 0.8) 1.57%,
+      rgba(196, 196, 196, 0.1) 100%
+    );
+    backdrop-filter: blur(30px);
     &:focus {
       border: none;
       outline: none;
     }
+    &::placeholder {
+      color: #222;
+      opacity: 0.6;
+    }
   }
   input {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
+    font-size: 14px;
     border: none;
     width: 100%;
-    font-weight: 300;
-    padding: 10px;
-    border-radius: 20px;
-    min-height: 46px;
-    max-height: 42px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 90px;
     background-color: #e6e6e6;
-    color: #4d4d4d;
+    color: #222;
+    opacity: 1;
     &:focus {
       outline: none;
     }
     &::placeholder {
-      color: rgba(0, 0, 0, 0.579);
-      opacity: 1;
+      color: #222;
+      opacity: 0.6;
     }
   }
   .titleInputStyle {

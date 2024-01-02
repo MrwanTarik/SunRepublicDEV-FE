@@ -488,6 +488,11 @@
 }
 
 @media (max-width: 650px) {
+  .WhatWeSellPage {
+    p {
+      font-size: 14px !important;
+    }
+  }
   .joinCommunity {
     font-size: 14px !important;
     font-family: 'Oxygen', sans-serif;
@@ -557,9 +562,7 @@
       }
     }
   }
-  p {
-    font-size: 14px !important;
-  }
+
   .dial {
     flex-direction: column;
     margin: 0px 15px 0 !important;

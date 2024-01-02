@@ -52,7 +52,7 @@
   "Enter your Email": "Enter your Email",
   "Tell more": "Tell more",
   "NEXT": "SONRAKI",
-  "SEND": "Göndermek",
+  "SEND": "danışma almak için",
   "Add photos": "Add photos",
   "Similar queries": "Similar queries",
   "MAKE A TOUR WITH US": "MAKE A TOUR WITH US",
@@ -282,5 +282,15 @@
   "DisclosureIncomeContent": "Yaptırımlar ve \"KKTC \"nin uluslararası alanda tanınmaması nedeniyle, Kuzey Kıbrıs bankacılık sektörü uluslararası ﬁnans kuruluşlarından büyük ölçüde izole edilmiş durumdadır. Bölgede faaliyet gösteren bankaların SWIFT sistemine erişimi yoktur ve Türkiye dışında neredeyse hiç muhabir bankacılık ilişkileri bulunmamaktadır.",
   "EverybodyWelcome": "Herkese Açık",
   "EverybodyWelcomeContent": "Dünyadaki hemen hemen her pasaport Kuzey Kıbrıs'a önceden vize gerekmeksizin girebilir! Ayrıca, buna ek olarak, neredeyse her ülke vatandaşı Kuzey Kıbrıs'ta mülk satın alabilir.",
-  "Bookanow!": "Şimdi ücretsiz bir mülk ayırtın!"
+  "Bookanow!": "Şimdi ücretsiz bir mülk ayırtın!",
+  "heroHeader": "Kuzey Kıbrıs'taki emlak arama danışmanınız!",
+  "heroPara": "Bir talep bırakın ve ihtiyaçlarınız için 10 adede kadar nesne alın (daireler, apartmanlar, villalar) ",
+  "heroParaSpan": " 80 bin GBP'den başlayan fiyatlarla",
+  "icon-content1": "Konaklama için",
+  "icon-content2": "Yatırım için",
+  "icon-content3": "Tam yasal destek ile",
+  "comment": "Yorumlar",
+  "heroContent1": "yılların emlak deneyimi",
+  "heroContent2": "memnun müşteri̇ler",
+  "heroContent3": "portföydeki emlak geliştiricilerinin"
 }
