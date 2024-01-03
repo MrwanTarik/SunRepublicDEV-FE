@@ -419,9 +419,11 @@ a.active {
 }
 
 @media (max-width: 1120px) {
-  h2 {
-    font-size: 40px !important;
-    margin-bottom: 10px !important;
+  .about {
+    h2 {
+      font-size: 40px !important;
+      margin-bottom: 10px !important;
+    }
   }
   .WhatWeSellPage {
     p {
