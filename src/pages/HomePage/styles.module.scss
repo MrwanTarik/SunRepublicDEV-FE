@@ -157,6 +157,18 @@
     }
   }
 }
+.sixthSection {
+  ul {
+    li {
+      span {
+        display: block;
+        height: 4px;
+        width: 20px;
+        background-color: #f26e21;
+      }
+    }
+  }
+}
 .sectionTwoBg {
   background-image: url('../../assets/images/second-section-bg.png') !important;
   z-index: -1;
