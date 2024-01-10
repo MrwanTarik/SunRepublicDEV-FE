@@ -1,123 +1,55 @@
 /* eslint-disable no-alert */
-import React from 'react';
-
 import { Link } from 'react-router-dom';
-// import classNames from 'classnames';
-
 import { t } from '../../../i18n';
 import classes from './styles.module.scss';
-import instaImage from '../../../assets/images/insta.png';
-import faceImage from '../../../assets/images/facebook.png';
-import logo from '../../../assets/images/logoHeader.png';
-import youtube from '../../../assets/images/youtube.png';
-import whatsApp from '../../../assets/images/whatsapp.png';
-
+import instaIcon from '../../../assets/images/insta-icon.png';
+import youtubeIcon from '../../../assets/images/youtube-icon.png';
+import facebookIcon from '../../../assets/images/facebook-icon.png';
+import whatsApp from '../../../assets/images/whatsapp-icon.png';
 export default function Footer() {
   return (
-    <>
-      <div className={classes.bzoTwo}>
-        <footer className={classes.Footer}>
-          <div className={classes.container}>
-            <div className={classes.firstFooterSection}>
-              <ul className={classes.linksHolder}>
-                <li>
-                  <Link to="/buy">{t('BUY')}</Link>
-                </li>
-                <li>
-                  <Link to="/rent">{t('RENT')}</Link>
-                </li>
-                <li>
-                  <Link to="/sell">{t('SELL')}</Link>
-                </li>
-                <li>
-                  <Link to="/cyprus">{t('CYPRUS')}</Link>
-                </li>
-                <li>
-                  <Link to="/contact-us">{t('CONTACT')}</Link>
-                </li>
-                <li>
-                  <Link to="/about">{t('ABOUT')}</Link>
-                </li>
-              </ul>
-            </div>
-            <div className={classes.SecondFooterSection}>
-              <div className={classes.socialLinks}>
-                <div className={classes.instaFace}>
-                  <Link
-                    rel="noreferrer"
-                    target="_blank"
-                    to="https://www.instagram.com/sunrepublic.vip/"
-                  >
-                    <img
-                      width="30px"
-                      height="30px"
-                      src={instaImage}
-                      alt="insta"
-                    />
-                  </Link>
-                  <Link
-                    rel="noreferrer"
-                    target="_blank"
-                    to="https://www.facebook.com/sunrepublic.vip/"
-                  >
-                    <img
-                      width="30px"
-                      height="30px"
-                      src={faceImage}
-                      alt="face"
-                    />
-                  </Link>
-                </div>
-                <div className={classes.logo}>
-                  <img height="64px" width="149px" src={logo} alt="logo" />
-                </div>
-                <div className={classes.ytWt}>
-                  <Link
-                    rel="noreferrer"
-                    target="_blank"
-                    to="https://wa.me/905338457788"
-                  >
-                    <img
-                      width="30px"
-                      height="30px"
-                      src={whatsApp}
-                      alt="whats"
-                    />
-                  </Link>
-                  <Link
-                    rel="noreferrer"
-                    target="_blank"
-                    to="https://www.youtube.com/c/IrinDrealty"
-                  >
-                    <img width="30px" height="30px" src={youtube} alt="yt" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className={classes.ThirdFooterSection}>
-              <div className={classes.info}>
-                <div className={classes.location}>
-                  <p>
-                    {t('location')} {t('locationContent')}
-                  </p>
-                </div>
-                <div className={classes.number}>
-                  <Link href="tel:+90 533 845 7788">
-                    {' '}
-                    {t('number')}+90 533 845 7788
-                  </Link>
-                </div>
-              </div>
+    <div className="bg-footer bg-cover bg-no-repeat bg-center py-[36px] lg:py-[60px]">
+      <div className="container">
+        <div className="flex flex-col gap-y-[20px] justify-between items-center lg:flex-row ">
+          <div className="w-full text-center sm:text-start sm:w-[48%] lg:w-[30.8%]">
+            <h2 className="text-[24px] pb-[15px] lg:pb-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] text-white">
+              {t('footerHeader')}
+              <span className="text-[#F26E21]">{t('footerSpan')}</span>
+            </h2>
+            <p className="text-white text-[16px] leading-[23px]">
+              {t('footerPara')}
+            </p>
+          </div>
+          <div className="w-full sm:w-[48%] lg:w-[30.8%] flex flex-col items-center text-start ">
+            <p className="text-white text-[16px] leading-[23px] font-bold">
+              Serap Nedim Apt. No: 1
+            </p>
+            <p className="text-white text-[16px] leading-[23px] font-bold mb-[32px] lg:mb-[22px]">
+              Samsun Bulvari Iskele, 9985
+            </p>
+
+            <p className="text-white text-[16px] leading-[23px] font-bold mb-[32px] lg:mb-[22px]">
+              +90 533 845 7788
+            </p>
+          </div>
+          <div className="w-full sm:w-[48%] lg:w-[30.8%]">
+            <div className="flex gap-x-0 sm:gap-x-[15px] justify-center">
+              <Link className="flex justify-center" to="/">
+                <img src={instaIcon} alt="" />
+              </Link>
+              <Link className="flex justify-center" to="/">
+                <img src={facebookIcon} alt="" />
+              </Link>
+              <Link className="flex justify-center" to="/">
+                <img src={youtubeIcon} alt="" />
+              </Link>
+              <Link className="flex justify-center" to="/">
+                <img src={whatsApp} alt="" />
+              </Link>
             </div>
           </div>
-        </footer>
-      </div>
-      <div className={classes.rightResrved}>
-        <div className={classes.rightContainer}>
-          <p>{t('allResrved')}</p>
-          <p>{t('powered')}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

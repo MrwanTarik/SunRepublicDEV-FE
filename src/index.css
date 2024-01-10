@@ -29,3 +29,27 @@ body {
     padding: 0 20px;
   }
 }
+.swiper-pagination {
+  position: unset !important;
+  margin-top: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  opacity: 0.2 !important;
+  background-color: white;
+}
+.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+  opacity: 1 !important;
+  border-radius: 10px;
+}
+@media (max-width: 1023px) {
+  .swiper-pagination {
+    margin-top: 15px;
+  }
+}
