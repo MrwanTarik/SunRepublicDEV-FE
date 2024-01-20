@@ -79,11 +79,111 @@
     }
   }
 }
+.fifthSection {
+  background-image: url('../../assets/images/fifthsection-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  ul li::before {
+    color: #f26e21;
+    content: '\2022';
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 15px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+  .form {
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.21);
+    padding: 30px 25px;
+    box-shadow: 5px 4px 27px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(16px);
+    input[type='text'],
+    input[type='tel'],
+    textarea {
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: linear-gradient(
+        109deg,
+        rgba(201, 201, 201, 0.8) 1.57%,
+        rgba(196, 196, 196, 0.1) 100%
+      );
+      backdrop-filter: blur(30px);
+    }
+    input[type='text'],
+    input[type='tel'] {
+      border-radius: 90px;
+      height: 50px !important;
+    }
+    textarea {
+      border-radius: 0px 90px 90px 90px;
+    }
+  }
+  .successMessage {
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.21);
+    padding: 30px 20px;
+    box-shadow: 5px 4px 27px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(16px);
+    .thankContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h6 {
+        color: white;
+        font-size: 20px;
+        text-align: center !important;
+        font-weight: 400;
+        font-weight: 600;
+        margin: 30px 0;
+        text-align: start;
+      }
+      a {
+        background-color: #ef9725;
+        border-radius: 50px;
+        color: #fff;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 50px;
+        text-align: center;
+        text-decoration: none;
+        text-decoration: initial;
+        text-transform: capitalize;
+        width: 100%;
+      }
+    }
+  }
+}
+
 .sectionTwoBg {
   background-image: url('../../assets/images/second-section-bg.png') !important;
   z-index: -1;
 }
+.circlur {
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 50px 50px;
+  min-height: 350px;
+  flex: 1;
 
+  &:last-child {
+    position: relative;
+    left: -50px;
+  }
+}
+@media (max-width: 1279px) {
+  .circlur {
+    padding: 60px 50px;
+    min-height: 250px;
+    &:last-child {
+      left: 0;
+      top: -30px;
+    }
+  }
+}
 @media (max-width: 1024px) {
   .hero {
     min-height: calc(100vh - 47px);

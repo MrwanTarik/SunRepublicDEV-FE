@@ -21,6 +21,7 @@ import PropertyService from '../services/PropertyService';
 import { UIContext } from '../context';
 import PropertyTourPage from '../pages/PropertyTourPage';
 import ScrollToTop from './ScrollTop';
+import Webinar from '../pages/WebinarPage';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -93,6 +94,7 @@ const RoutesComponent = () => {
                   path="/rent"
                   element={<BuyOrRentPage currentPage="rent" />}
                 />
+                <Route path="/webinar" element={<Webinar />} />
                 <Route path="/sell" element={<SellPage />} />
                 <Route path="/add-property" element={<AddPropertyPage />} />
                 <Route path="/property-list" element={<PropertyListPage />} />
@@ -104,7 +106,7 @@ const RoutesComponent = () => {
                 <Route path="/cyprus/title/:title" element={<BlogPostPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/tours" element={<PropertyTourPage />} />
-                <Route path='/property-tour' element= {<TourPage />} />
+                <Route path="/property-tour" element={<TourPage />} />
               </Routes>
             </Layout>
           </UIContext.Provider>

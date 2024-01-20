@@ -23,9 +23,21 @@ import thirdSectionThirdImg from '../../assets/images/thirdSecThird-img.png';
 import thirdSectionFourthImg from '../../assets/images/thirdSecForth-img.png';
 import thirdSectionFifthImg from '../../assets/images/thirdSecFifth-img.png';
 import thirdSectionSixthImg from '../../assets/images/thirdSecSex-img.png';
-import forthSectionFirstImg from '../../assets/images/forthSecFirst-img.png';
+import forthSectionFirstImg from '../../assets/images/1.svg';
+import forthSectionSecondImg from '../../assets/images/2.svg';
+import forthSectionThirdImg from '../../assets/images/3.svg';
+import forthSectionForthImg from '../../assets/images/4.svg';
+import forthSectionFifthImg from '../../assets/images/5.svg';
+import forthSectionSixthImg from '../../assets/images/6.svg';
+
 import OfferCard from '../../components/OfferCard/OfferCard';
 import ClientCard from '../../components/ClientCard/ClientCard';
+import ConditionIcon from '../../assets/images/condition-icon.png';
+import SwiperSlider from '../../components/SwiperSlider';
+import seventhIcon1 from '../../assets/images/seventh-icon1.png';
+import seventhIcon2 from '../../assets/images/seventh-icon2.png';
+import sunRepublicImg from '../../assets/images/sun-republic-img.png';
+import TeamImg from '../../assets/images/team-img.png';
 const thirdSectionData = [
   {
     image: thirdSectionFirstImg,
@@ -72,31 +84,31 @@ const forthSectionData = [
     num: '01',
   },
   {
-    image: forthSectionFirstImg,
+    image: forthSectionSecondImg,
     title: t('forthSectionTitle2'),
     content: t('forthSectionContent2'),
     num: '02',
   },
   {
-    image: forthSectionFirstImg,
+    image: forthSectionThirdImg,
     title: t('forthSectionTitle3'),
     content: t('forthSectionContent3'),
     num: '03',
   },
   {
-    image: forthSectionFirstImg,
+    image: forthSectionForthImg,
     title: t('forthSectionTitle4'),
     content: t('forthSectionContent4'),
     num: '04',
   },
   {
-    image: forthSectionFirstImg,
+    image: forthSectionFifthImg,
     title: t('forthSectionTitle5'),
     content: t('forthSectionContent5'),
     num: '05',
   },
   {
-    image: forthSectionFirstImg,
+    image: forthSectionSixthImg,
     title: t('forthSectionTitle6'),
     content: t('forthSectionContent6'),
     num: '06',
@@ -125,10 +137,7 @@ const validationSchema = yup.object({
     .required('This field is required'),
   description: yup.string().trim().required('This field is required'),
 });
-
-export default function HomePage() {
-  // const { searchTerm } = useContext(UIContext);
-
+const Form1 = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const containerRef = useRef();
 
@@ -158,7 +167,320 @@ export default function HomePage() {
     setIsFormSubmitted(false);
   };
   return (
-    <>
+    <div className="w-full lg:w-[26.3%]">
+      <div style={{ height: '100%' }} className={classes.forms}>
+        {isFormSubmitted ? (
+          <div style={{ height: '100%' }} className={classes.successMessage}>
+            {i18n.language === 'en' ? (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxEn}
+                    alt="Success Image for English"
+                  />
+                  <h6>
+                    {' '}
+                    We just received your message and will get in touch as soon
+                    as possible.
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Go Back To Form
+                  </Link>
+                </div>
+              </div>
+            ) : i18n.language === 'tr' ? (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxTr}
+                    alt="Success Image for Turkey"
+                  />
+                  <h6>
+                    {' '}
+                    Mesajınızı yeni aldık ve en kısa sürede sizinle iletişime
+                    geçeceğiz
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Forma Geri Dön
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxRu}
+                    alt="Success Image for Russian"
+                  />
+                  <h6>
+                    {' '}
+                    Мы получили Ваше сообщение и свяжемся с Вами в ближайшее
+                    время
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Вернуться к Форме
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <form className={classes.form} onSubmit={formik.handleSubmit}>
+            <div className={classes.inputs}>
+              <div className={classes.nameContainer}>
+                <div className="pb-[20px]">
+                  <TextInput
+                    placeholder={t('Name')}
+                    name="name"
+                    value={formik.values.name}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.errors.name && formik.touched.name && (
+                    <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
+                      {formik.errors.name}
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="pb-[20px]">
+                <PhoneInput
+                  placeholder={t('Phone')}
+                  name="phone"
+                  value={formik.values.phone}
+                  setFieldValue={formik.setFieldValue}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.errors.phone && formik.touched.phone && (
+                  <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
+                    {formik.errors.phone}
+                  </div>
+                )}
+              </div>
+              <div className={classes.textInputContainer}>
+                <TextInput
+                  name="description"
+                  placeholder={t('comment')}
+                  value={formik.values.description}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  descriptionInputStyle={true}
+                />
+              </div>
+            </div>
+            <div className={classes.buttonContainer}>
+              <Button
+                onClick={formik.handleSubmit}
+                disabled={
+                  !formik.isValid ||
+                  Object.keys(formik.values).every(
+                    (key) => formik.values[key] === ''
+                  )
+                }
+              >
+                {t('SEND')}
+              </Button>
+            </div>
+          </form>
+        )}
+      </div>
+    </div>
+  );
+};
+const Form2 = () => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const containerRef = useRef();
+
+  // const [searchParams] = useSearchParams();
+  // const searchParam = searchParams.get('search');
+  const sendMessage = async (values, { resetForm }) => {
+    try {
+      await axios.post(`${API_URL}/contact`, values);
+      resetForm();
+      setIsFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      phone: '',
+      description: '',
+    },
+    validationSchema,
+    onSubmit: sendMessage,
+  });
+  // const navigate = useNavigate();
+  const handleGoBackToForm = () => {
+    setIsFormSubmitted(false);
+  };
+  return (
+    <div className="w-full lg:w-[28%]">
+      <div style={{ height: '100%' }} className={classes.forms}>
+        {isFormSubmitted ? (
+          <div style={{ height: '100%' }} className={classes.successMessage}>
+            {i18n.language === 'en' ? (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxEn}
+                    alt="Success Image for English"
+                  />
+                  <h6>
+                    {' '}
+                    We just received your message and will get in touch as soon
+                    as possible.
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Go Back To Form
+                  </Link>
+                </div>
+              </div>
+            ) : i18n.language === 'tr' ? (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxTr}
+                    alt="Success Image for Turkey"
+                  />
+                  <h6>
+                    {' '}
+                    Mesajınızı yeni aldık ve en kısa sürede sizinle iletişime
+                    geçeceğiz
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Forma Geri Dön
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div
+                style={{ height: '100%' }}
+                className={classes.thankContainer}
+              >
+                <div>
+                  <img
+                    width={'100%'}
+                    src={thnxRu}
+                    alt="Success Image for Russian"
+                  />
+                  <h6>
+                    {' '}
+                    Мы получили Ваше сообщение и свяжемся с Вами в ближайшее
+                    время
+                  </h6>
+                </div>
+                <div>
+                  <Link onClick={handleGoBackToForm} to={'/'}>
+                    Вернуться к Форме
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <form className={classes.form} onSubmit={formik.handleSubmit}>
+            <h2 className="text-white text-center text-[20px] font-extrabold max-w-[299px] mb-[20px]">
+              {t('fifthSectionForm')}
+            </h2>
+            <div className={classes.inputs}>
+              <div className={classes.nameContainer}>
+                <div className="pb-[20px]">
+                  <TextInput
+                    placeholder={t('Name')}
+                    name="name"
+                    value={formik.values.name}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.errors.name && formik.touched.name && (
+                    <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
+                      {formik.errors.name}
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="pb-[20px]">
+                <PhoneInput
+                  placeholder={t('Phone')}
+                  name="phone"
+                  value={formik.values.phone}
+                  setFieldValue={formik.setFieldValue}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.errors.phone && formik.touched.phone && (
+                  <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
+                    {formik.errors.phone}
+                  </div>
+                )}
+              </div>
+              <div className={classes.textInputContainer}>
+                <TextInput
+                  name="description"
+                  placeholder={t('comment')}
+                  value={formik.values.description}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  descriptionInputStyle={true}
+                />
+              </div>
+            </div>
+            <div className={classes.buttonContainer}>
+              <Button
+                onClick={formik.handleSubmit}
+                disabled={
+                  !formik.isValid ||
+                  Object.keys(formik.values).every(
+                    (key) => formik.values[key] === ''
+                  )
+                }
+              >
+                {t('SEND')}
+              </Button>
+            </div>
+          </form>
+        )}
+      </div>
+    </div>
+  );
+};
+export default function HomePage() {
+  // const { searchTerm } = useContext(UIContext);
+
+  return (
+    <div className="bg-[#2b2724]">
       <div
         className={classNames(
           classes.hero,
@@ -318,145 +640,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-full lg:w-[26.3%]">
-            <div style={{ height: '100%' }} className={classes.forms}>
-              {isFormSubmitted ? (
-                <div
-                  style={{ height: '100%' }}
-                  className={classes.successMessage}
-                >
-                  {i18n.language === 'en' ? (
-                    <div
-                      style={{ height: '100%' }}
-                      className={classes.thankContainer}
-                    >
-                      <div>
-                        <img
-                          width={'100%'}
-                          src={thnxEn}
-                          alt="Success Image for English"
-                        />
-                        <h6>
-                          {' '}
-                          We just received your message and will get in touch as
-                          soon as possible.
-                        </h6>
-                      </div>
-                      <div>
-                        <Link onClick={handleGoBackToForm} to={'/'}>
-                          Go Back To Form
-                        </Link>
-                      </div>
-                    </div>
-                  ) : i18n.language === 'tr' ? (
-                    <div
-                      style={{ height: '100%' }}
-                      className={classes.thankContainer}
-                    >
-                      <div>
-                        <img
-                          width={'100%'}
-                          src={thnxTr}
-                          alt="Success Image for Turkey"
-                        />
-                        <h6>
-                          {' '}
-                          Mesajınızı yeni aldık ve en kısa sürede sizinle
-                          iletişime geçeceğiz
-                        </h6>
-                      </div>
-                      <div>
-                        <Link onClick={handleGoBackToForm} to={'/'}>
-                          Forma Geri Dön
-                        </Link>
-                      </div>
-                    </div>
-                  ) : (
-                    <div
-                      style={{ height: '100%' }}
-                      className={classes.thankContainer}
-                    >
-                      <div>
-                        <img
-                          width={'100%'}
-                          src={thnxRu}
-                          alt="Success Image for Russian"
-                        />
-                        <h6>
-                          {' '}
-                          Мы получили Ваше сообщение и свяжемся с Вами в
-                          ближайшее время
-                        </h6>
-                      </div>
-                      <div>
-                        <Link onClick={handleGoBackToForm} to={'/'}>
-                          Вернуться к Форме
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <form className={classes.form} onSubmit={formik.handleSubmit}>
-                  <div className={classes.inputs}>
-                    <div className={classes.nameContainer}>
-                      <div className="pb-[20px]">
-                        <TextInput
-                          placeholder={t('Name')}
-                          name="name"
-                          value={formik.values.name}
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                        />
-                        {formik.errors.name && formik.touched.name && (
-                          <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
-                            {formik.errors.name}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <div className="pb-[20px]">
-                      <PhoneInput
-                        placeholder={t('Phone')}
-                        name="phone"
-                        value={formik.values.phone}
-                        setFieldValue={formik.setFieldValue}
-                        onBlur={formik.handleBlur}
-                      />
-                      {formik.errors.phone && formik.touched.phone && (
-                        <div className="text-[red] font-medium text-[14px] ps-[5px] pt-[10px]">
-                          {formik.errors.phone}
-                        </div>
-                      )}
-                    </div>
-                    <div className={classes.textInputContainer}>
-                      <TextInput
-                        name="description"
-                        placeholder={t('comment')}
-                        value={formik.values.description}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        descriptionInputStyle={true}
-                      />
-                    </div>
-                  </div>
-                  <div className={classes.buttonContainer}>
-                    <Button
-                      onClick={formik.handleSubmit}
-                      disabled={
-                        !formik.isValid ||
-                        Object.keys(formik.values).every(
-                          (key) => formik.values[key] === ''
-                        )
-                      }
-                    >
-                      {t('SEND')}
-                    </Button>
-                  </div>
-                </form>
-              )}
-            </div>
-          </div>
+          <Form1 />
         </div>
         <div className="lg:border-t border-[rgba(255,255,255,0.4)]">
           <div className="flex flex-col lg:flex-row container ">
@@ -489,7 +673,7 @@ export default function HomePage() {
       </div>
       <div className="pt-[50px] lg:pt-[90px] relative home-section-two">
         <div className="container">
-          <div className="pt-0 lg:pt-[60px] w-full lg:w-[49.2%]">
+          <div className="pt-0 lg:pt-[60px] w-full lg:w-[49.2%] relative z-[2]">
             <h2 className="text-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] font-extrabold text-white pb-[25px] lg:pb-[32px]">
               <span className="">
                 {t('secondSectionSpan1')}{' '}
@@ -566,7 +750,7 @@ export default function HomePage() {
           <div
             className={classNames(
               classes.sectionTwoBg,
-              `absolute sectionTwo-bg top-0 right-0 lg:w-[72.8%] bg-cover bg-no-repeat lg:h-[680px] mt-[90px] hidden lg:flex justify-center items-center`
+              `absolute sectionTwo-bg top-0 right-0 lg:w-[72.8%] bg-cover bg-no-repeat lg:h-[680px] mt-[90px] hidden lg:flex justify-center items-center z-[1]`
             )}
           >
             <img
@@ -615,6 +799,184 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </>
+      <div
+        className={classNames(
+          classes.fifthSection,
+          'mt-[50px] lg:mt-[90px] pt-[36px] lg:pt-[65px] pb-[41px] lg:pb-[95px] '
+        )}
+      >
+        <div className="container">
+          <div className="flex flex-col lg:flex-row justify-start items-center lg:justify-between">
+            <div className="w-full lg:w-[53%] mt-0 lg:mt-[31px]">
+              <h2 className="text-white text-[18px]  lg:text-[24px] font-bold leading-[26px] lg:leading-[52px]  ">
+                {t('fifthSectionHeader1')}
+              </h2>
+              <h2 className="text-white text-[24px] mt-[10px] lg:mt-0 font-extrabold lg:text-[40px] leading-[32px] lg:leading-[52px] mb-[25px] lg:mb-[40px]">
+                <span>
+                  {t('fifthSectionHeader2')}
+                  <span className="text-[#F26E21]">
+                    {t('fifthSectionSpan')}
+                  </span>
+                </span>
+                {t('fifthSectionHeader3')}
+              </h2>
+              <ul className=" m-0 p-0 pb-[40px] lg:pb-0">
+                <li className="text-white text-[14px] font-normal leading-[23px] mb-[12px]">
+                  {t('fifthSectionItem1')}
+                </li>
+                <li className="text-white text-[14px] font-normal leading-[23px] mb-[12px]">
+                  {t('fifthSectionItem2')}
+                </li>
+                <li className="text-white text-[14px] font-normal leading-[23px] mb-[12px]">
+                  {t('fifthSectionItem3')}
+                </li>
+                <li className="text-white text-[14px] font-normal leading-[23px] mb-[12px]">
+                  {t('fifthSectionItem4')}
+                </li>
+              </ul>
+            </div>
+            <Form2 />
+          </div>
+        </div>
+      </div>
+      <div
+        className={classNames(
+          classes.sixthSection,
+          'pt-[50px] lg:pt-[90px] relative'
+        )}
+      >
+        <div className="container flex flex-col lg:flex-row">
+          <div className="w-full lg:w-[40.3%]">
+            3
+            <h2 className="text-white text-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] font-extrabold pb-[20px] lg:pb-[40px]">
+              {t('sixthSectionHeader')}{' '}
+              <span className="text-[#F26E21]">{t('sixthSectionSpan')}</span>
+            </h2>
+            <div className="">
+              <div className="flex  mb-[20px] lg:mb-[25px]">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionpara1')}
+                  <span className="font-bold">{t('sixthSectionSpan1')}</span>
+                </p>
+              </div>
+              <div className="flex  mb-[20px] lg:mb-[25px]">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionpara2')}
+                  <span className="font-bold">{t('sixthSectionSpan2')}</span>
+                </p>
+              </div>
+              <div className="flex  mb-[20px] lg:mb-[25px]">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionPara3')}
+                  <span className="font-bold">{t('sixthSectionSpan3')}</span>
+                </p>
+              </div>
+              <div className="flex  mb-[20px] lg:mb-[25px]">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionPara4')}
+                  <span className="font-bold">{t('sixthSectionSpan4')}</span>
+                </p>
+              </div>
+              <div className="flex  mb-[20px] lg:mb-[25px]">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionPara5')}
+                  <span className="font-bold">{t('sixthSectionSpan5')}</span>
+                </p>
+              </div>
+              <div className="flex ">
+                <img
+                  className="!w-[20px] !h-[2px] me-[15px] lg:me-[25px] mt-[7px]"
+                  src={ConditionIcon}
+                  alt="ConditionIcon"
+                />
+                <p className="text-white text-[14px]  lg:text-[16px] leading-[21px] lg:leading-[23px]">
+                  {t('sixthSectionPara6')}
+                  <span className="font-bold">{t('sixthSectionSpan6')}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:absolute right-0 top-0 pt-[40px] lg:pt-0 w-full lg:w-[55%]">
+            <SwiperSlider />
+          </div>
+        </div>
+      </div>
+      <div className="pt-[50px] relative lg:pt-[160px]">
+        <img
+          src={sunRepublicImg}
+          className="absolute left-[50%] translate-x-[-50%] w-full bottom-[-50px] lg:bottom-[-200px] "
+        />
+        <div className="container">
+          <div className="flex  flex-col xl:flex-row justify-between items-center">
+            <div className="w-full xl:w-[35.9%]">
+              <h2 className="text-white text-[24px] xl:text-[40px] leading-[32px] xl:leading-[52px] font-extrabold">
+                {t('sevenSectionHeader')}{' '}
+                <span className="text-[#F26E21]">{t('sevenSectionSpan')}</span>
+              </h2>
+            </div>
+            <div className="w-full pt-[25px] lg:pt-0 xl:w-[60%] flex flex-col xl:flex-row items-center xl:items-start">
+              <div className={classes.circlur}>
+                <div className="">
+                  <img
+                    className="mb-[25px] m-auto xl:mb-[35px]"
+                    src={seventhIcon1}
+                    alt="seventhIcon1"
+                  />
+                  <h2 className="text-white text-[18px] xl:text-[24px] font-bold leading-[24px] xl:leading-[32px] text-center mb-[15px] xl:mb-[25px]">
+                    {t('sventhSectionIcon1')}
+                  </h2>
+                  <p className="text-[14px] leading-[21px] text-white xl:text-[16px] font-normal xl:leading-[23px] text-center">
+                    {t('sventhSectionIcon2')}
+                  </p>
+                </div>
+              </div>
+              <div className={classes.circlur}>
+                <div className="">
+                  <img
+                    className="mb-[25px] m-auto xl:mb-[35px]"
+                    src={seventhIcon2}
+                    alt="seventhIcon1"
+                  />
+                  <h2 className="text-white text-[18px] xl:text-[24px] font-bold leading-[24px] xl:leading-[32px] text-center mb-[15px] xl:mb-[25px]">
+                    {t('sventhSectionIcon3')}
+                  </h2>
+                  <p className="text-[14px] leading-[21px] text-white xl:text-[16px] font-normal xl:leading-[23px] text-center">
+                    {t('sventhSectionIcon4')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container !py-[50px] lg:py-[90px]">
+        <img className="w-full object-cover" src={TeamImg} alt="TeamImg" />
+      </div>
+    </div>
   );
 }
