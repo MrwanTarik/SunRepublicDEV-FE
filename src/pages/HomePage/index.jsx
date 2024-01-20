@@ -480,7 +480,7 @@ export default function HomePage() {
   // const { searchTerm } = useContext(UIContext);
 
   return (
-    <>
+    <div className="bg-[#2b2724]">
       <div
         className={classNames(
           classes.hero,
@@ -673,7 +673,7 @@ export default function HomePage() {
       </div>
       <div className="pt-[50px] lg:pt-[90px] relative home-section-two">
         <div className="container">
-          <div className="pt-0 lg:pt-[60px] w-full lg:w-[49.2%]">
+          <div className="pt-0 lg:pt-[60px] w-full lg:w-[49.2%] relative z-[2]">
             <h2 className="text-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] font-extrabold text-white pb-[25px] lg:pb-[32px]">
               <span className="">
                 {t('secondSectionSpan1')}{' '}
@@ -750,7 +750,7 @@ export default function HomePage() {
           <div
             className={classNames(
               classes.sectionTwoBg,
-              `absolute sectionTwo-bg top-0 right-0 lg:w-[72.8%] bg-cover bg-no-repeat lg:h-[680px] mt-[90px] hidden lg:flex justify-center items-center`
+              `absolute sectionTwo-bg top-0 right-0 lg:w-[72.8%] bg-cover bg-no-repeat lg:h-[680px] mt-[90px] hidden lg:flex justify-center items-center z-[1]`
             )}
           >
             <img
@@ -847,6 +847,7 @@ export default function HomePage() {
       >
         <div className="container flex flex-col lg:flex-row">
           <div className="w-full lg:w-[40.3%]">
+            3
             <h2 className="text-white text-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] font-extrabold pb-[20px] lg:pb-[40px]">
               {t('sixthSectionHeader')}{' '}
               <span className="text-[#F26E21]">{t('sixthSectionSpan')}</span>
@@ -976,6 +977,6 @@ export default function HomePage() {
       <div className="container !py-[50px] lg:py-[90px]">
         <img className="w-full object-cover" src={TeamImg} alt="TeamImg" />
       </div>
-    </>
+    </div>
   );
 }

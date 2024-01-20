@@ -23,12 +23,10 @@ export default function AboutPage() {
           <div className={classes.container}>
             <h1>
               {i18n.language === 'tr' ? (
-                <>
-                  <span>Sun</span> {t('aboutHeader')}
-                </>
+                <>{t('aboutHeader')}</>
               ) : (
                 <>
-                  {t('aboutHeader')} <span>Sun</span>
+                  {t('aboutHeader')} <span>Sun </span> {t('aboutHeaderTwo')}
                 </>
               )}
             </h1>
@@ -55,11 +53,12 @@ export default function AboutPage() {
               <h2>
                 {i18n.language === 'tr' ? (
                   <>
-                    <span style={{marginRight:"8px"}}>{t('sunRebublicH')}</span> {t('ABOUTw')}
+                    <span style={{ marginRight: '8px' }}>
+                      {t('sunRebublicH')}
+                    </span>{' '}
                   </>
                 ) : (
                   <>
-                    {t('ABOUTw')}
                     <span>{t('sunRebublicH')}</span>
                   </>
                 )}

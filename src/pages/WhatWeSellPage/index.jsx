@@ -191,6 +191,9 @@ export default function WhatWeSellPage() {
               <span></span>
               {t('northenCyprusContentTwo')}
             </p>
+            <p className="pt-[20px] !indent-0">
+              {t('northenCyprusContentThree')}
+            </p>
           </div>
           <div className={classes.northenCyprusImages}>
             <img src={northenCyprus} alt="northenCyprus" />
@@ -217,8 +220,6 @@ export default function WhatWeSellPage() {
             <p>{t('KyreniaContentOne')}</p>
             <p>{t('KyreniaContentTwo')}</p>
             <p>{t('KyreniaContentThree')}</p>
-            <p>{t('KyreniaContentFour')}</p>
-            <p>{t('KyreniaContentFifth')}</p>
           </div>
           <div className={classes.KyreniaImg}>
             <img src={Kyrenia} alt="KyreniaImg" />
