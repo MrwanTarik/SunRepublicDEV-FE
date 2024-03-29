@@ -1,5 +1,6 @@
 .hero {
   min-height: calc(100vh - 80px);
+  background-attachment: fixed;
   background-image: url('../../assets/images/hero-IMG.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -166,7 +167,7 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 50px 50px;
-  min-height: 350px;
+  height: 404px;
   flex: 1;
 
   &:last-child {
@@ -177,7 +178,7 @@
 @media (max-width: 1279px) {
   .circlur {
     padding: 60px 50px;
-    min-height: 250px;
+    min-height: 378px;
     &:last-child {
       left: 0;
       top: -30px;

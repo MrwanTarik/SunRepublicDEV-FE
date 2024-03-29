@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import { useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import PropertyListMobile from '../../components/PropertyListMobile';
@@ -9,6 +9,8 @@ import { t } from '../../i18n';
 import classes from './styles.module.scss';
 import i18n from '../../i18n';
 export default function BuyOrRentPage({ currentPage }) {
+  const location = useLocation();
+  const { buildingType } = location.state || {};
   const [bedrooms, setBedrooms] = useState('');
   const [bedroomsRent, setBedroomsRent] = useState('');
   const [ppid, setPpid] = useState('');
@@ -112,8 +114,7 @@ export default function BuyOrRentPage({ currentPage }) {
               setMinArea={setMinAreaRent}
               maxArea={maxAreaRent}
               setMaxArea={setMaxAreaRent}
-              hasPool={hasPoolRent}
-              setHasPool={setHasPoolRent}
+              buildType={buildingType}
               type={typeRent}
               setType={setTypeRent}
               region={regionRent}
@@ -128,6 +129,7 @@ export default function BuyOrRentPage({ currentPage }) {
         <div className={classes.propertyListContainer}>
           {currentPage === 'sell' && (
             <PropertyListComponent
+              buildType={buildingType}
               title={t('available')}
               titleTwo={t('properties')}
               filtersRef={filtersRef}

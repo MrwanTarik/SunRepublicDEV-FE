@@ -447,9 +447,9 @@ export default function PropertyPage() {
                     </li>
                   </ul>
                   <div className={classes.buttons}>
-                    <Button>
+                    {/* <Button>
                       {data?.action === 'sell' ? t('FOR SALE') : t('FOR RENT')}
-                    </Button>
+                    </Button> */}
                     <div className={classes.contactButtons}>
                       <a
                         href="https://wa.me/905338457788"

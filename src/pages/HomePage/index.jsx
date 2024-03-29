@@ -12,7 +12,7 @@ import playButton from '../../assets/images/play-button.png';
 import { API_URL } from '../../constants/main';
 // import { useSearchParams, Link } from 'react-router-dom';
 // import { UIContext } from '../../context';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { t } from '../../i18n';
 import i18n from '../../i18n';
 import classes from './styles.module.scss';
@@ -478,7 +478,10 @@ const Form2 = () => {
 };
 export default function HomePage() {
   // const { searchTerm } = useContext(UIContext);
-
+  const navigate = useNavigate();
+  const handleCardClick = (buildingType) => {
+    navigate('/buy', { state: { buildingType } });
+  };
   return (
     <div className="bg-[#2b2724]">
       <div
@@ -495,8 +498,7 @@ export default function HomePage() {
               </span>
               REPUBLIC
             </h1>
-            <p className="pt-[10px] lg:pt-[18px] text-[white] text-[24px] font-extrabold lg:text-[36px] leading-[30px] lg:leading-[46px]">
-              <span className="ps-[5px] lg:ps-[10px] ">-</span>{' '}
+            <p className="pt-[10px] lg:pt-[18px] text-[white] text-[24px] font-extrabold lg:text-[36px] leading-[30px] lg:leading-[46px] first-letter:capitalize">
               {t('heroHeader')}
             </p>
             <p className="text-white text-[18px] lg:text-[20px] font-bold leading-[25px] lg:leading-[28px] pt-[18px] lg:pt-[36px]">
@@ -648,31 +650,40 @@ export default function HomePage() {
               <h2 className="text-[#fff] lg:pt-[38px] text-[40px] lg:text-[45px] font-extrabold leading-[40px] lg:leading-[45px] uppercase">
                 10 +
               </h2>
-              <p className="text-white lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
+              <p className="text-white text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
                 {t('heroContent1')}
+              </p>
+              <p className="text-white lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start pe-[10px]">
+                {t('heroContent11')}
               </p>
             </div>
             <div className="lg:border-r my-[50px] lg:my-0 flex-1 border-[rgba(255,255,255,0.4)] flex flex-col items-center lg:items-start lg:gap-y-[25px] gap-y-[20px] text-center lg:text-start lg:ps-[70px] xl:ps-[90px]">
               <h2 className="text-[#fff] lg:pt-[38px] text-[40px] lg:text-[45px] font-extrabold leading-[40px] lg:leading-[45px] uppercase">
                 1300 +
               </h2>
-              <p className="text-white lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
+              <p className="text-white text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
                 {t('heroContent2')}
               </p>
+              <p className="text-white lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start pe-[10px]">
+                {t('heroContent22')}
+              </p>
             </div>
-            <div className=" flex-1  flex flex-col items-center lg:items-start lg:gap-y-[25px] gap-y-[20px] text-center lg:text-start lg:ps-[70px] xl:ps-[90px]">
+            <div className=" flex-1 mb-[50px] lg:my-0 flex flex-col items-center lg:items-start lg:gap-y-[25px] gap-y-[20px] text-center lg:text-start lg:ps-[70px] xl:ps-[90px]">
               <h2 className="text-[#fff] lg:pt-[38px] text-[40px] lg:text-[45px] font-extrabold leading-[40px] lg:leading-[45px] uppercase">
                 27 +{' '}
               </h2>
-              <p className="text-white pb-[48px] lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
+              <p className="text-white  text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start">
                 {t('heroContent3')}
+              </p>
+              <p className="text-white lg:pb-[45px] text-[14px] lg:text-[16px] font-medium leading-[14px] lg:leading-[22px] lowercase text-center lg:text-start pe-[10px]">
+                {t('heroContent33')}
               </p>
             </div>
           </div>
         </div>
       </div>
       <div className="pt-[50px] lg:pt-[90px] relative home-section-two">
-        <div className="container">
+        <div className="container flex flex-col lg:flex-row items-center lg:gap-x-[50px]">
           <div className="pt-0 lg:pt-[60px] w-full lg:w-[49.2%] relative z-[2]">
             <h2 className="text-[24px] lg:text-[40px] leading-[32px] lg:leading-[52px] font-extrabold text-white pb-[25px] lg:pb-[32px]">
               <span className="">
@@ -685,6 +696,9 @@ export default function HomePage() {
             </h2>
             <p className="text-white text-[16px] lg:text-[18px] leading-[22px] lg:leading-[28px] ">
               {t('secondSectionPara')}
+            </p>
+            <p className="text-white text-[16px] lg:text-[18px] leading-[22px] lg:leading-[28px] ">
+              {t('secondSectionParapart2')}
             </p>
             <div className="flex flex-col mt-0   lg:flex-row gap-x-0 lg:gap-x-[30px] gap-y-[25px] lg:gap-y-0 pt-[30px] lg:pt-[41px]">
               <div className="flex w-full lg:w-[50%] flex-row border-b-[2px] border-opacity-[0.2] border-[#D9D9D9] gap-x-[10px] items-start lg:gap-x-[12px] pb-[16px] lg:pb-[12px]">
@@ -747,7 +761,19 @@ export default function HomePage() {
               {t('secondSectionButton')}
             </Link>
           </div>
-          <div
+          <div className="w-full mt-[25px] lg:mt-0 lg:flex-1 h-[500px] rounded-[12px]">
+            <iframe
+              className="rounded-[12px]"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Dg3RvtFPUHY?si=YBf89Noo2XaKSeNO"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          {/* <div
             className={classNames(
               classes.sectionTwoBg,
               `absolute sectionTwo-bg top-0 right-0 lg:w-[72.8%] bg-cover bg-no-repeat lg:h-[680px] mt-[90px] hidden lg:flex justify-center items-center z-[1]`
@@ -758,8 +784,8 @@ export default function HomePage() {
               src={playButton}
               alt="playButton"
             />
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className={classNames(
               classes.sectionTwoBg,
               'sectionTwo-bg bg-cover mt-[40px] h-[244px] bg-center bg-no-repeat flex lg:hidden items-center justify-center '
@@ -770,7 +796,7 @@ export default function HomePage() {
               src={playButton}
               alt="playButton"
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="pt-[50px] lg:pt-[90px] ">
@@ -780,9 +806,213 @@ export default function HomePage() {
         </h2>
         <div className="container">
           <div className="grid grid-cols-12 gap-x-0 sm:gap-x-[30px] gap-y-[20px] lg:gap-y-[30px]">
-            {thirdSectionData.map((item, index) => (
+            {/* {thirdSectionData.map((item, index) => (
               <OfferCard item={item} key={index} />
-            ))}
+            ))} */}
+            <div
+              onClick={() => handleCardClick('Villa')}
+              buildingType="Villa"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionFirstImg}
+                    alt={thirdSectionFirstImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle1')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea1')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice1')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              onClick={() => handleCardClick('Studio')}
+              buildingType="Studio"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionSecondImg}
+                    alt={thirdSectionSecondImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle2')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea2')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice2')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              onClick={() => handleCardClick('Two bedrooms')}
+              buildingType="Two bedrooms"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionThirdImg}
+                    alt={thirdSectionThirdImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle3')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea3')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice3')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              onClick={() => handleCardClick('Three bedrooms')}
+              buildingType="Three bedrooms"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionFourthImg}
+                    alt={thirdSectionFourthImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle4')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea4')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice4')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              onClick={() => handleCardClick('Four bedrooms')}
+              buildingType="Four bedrooms"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionFifthImg}
+                    alt={thirdSectionFifthImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle5')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea5')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice5')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              onClick={() => handleCardClick('Bungalow Townhouse')}
+              buildingType="Bungalow Townhouse"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 cursor-pointer"
+            >
+              <div
+                className={classNames(
+                  classes.offerCard,
+                  'rounded-[30px] bg-[#343434] shadow-lg overflow-hidden'
+                )}
+              >
+                <div className="h-[256px] overflow-hidden">
+                  <img
+                    src={thirdSectionSixthImg}
+                    alt={thirdSectionSixthImg}
+                    className="w-full h-full  object-cover hover:scale-[1.1] transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out"
+                  />
+                </div>
+                <div className="">
+                  <h2 className="text-white !text-[18px] leading-[14px] font-extrabold uppercase py-[20px] px-[20px] lg:px-[25px] ">
+                    {t('thirdSectionTitle6')}
+                  </h2>
+                  <hr className="bg-white opacity-[0.4] h-[1px]" />
+                  <div className="flex">
+                    <p className="text-[14px] border-r-[1px] border-[#D9D9D9] border-opacity-[0.4] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionArea6')}
+                    </p>
+                    <p className="text-[14px] flex-1 leading-[14px] py-[20px] px-[20px] lg:px-[25px] text-white">
+                      {t('thirdSectionPrice6')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -793,9 +1023,105 @@ export default function HomePage() {
             <span className="text-[#F26E21]">{t('forthSectionSpan')}</span>
           </h2>
           <div className="grid grid-cols-12 gap-x-0 sm:gap-x-[30px] gap-y-[20px] lg:gap-y-[30px]">
-            {forthSectionData.map((item, index) => (
+            {/* {forthSectionData.map((item, index) => (
               <ClientCard item={item} key={index} />
-            ))}
+            ))} */}
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">01</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionFirstImg}
+                  alt="forthSectionTitle1"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle1')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent1')}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">02</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionSecondImg}
+                  alt="forthSectionSecondImg"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle2')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent2')}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">03</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionThirdImg}
+                  alt="forthSectionThirdImg"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle3')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent3')}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">04</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionForthImg}
+                  alt="forthSectionForthImg"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle4')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent4')}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">05</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionFifthImg}
+                  alt="forthSectionFifthImg"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle5')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent5')}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-6 lg:col-span-4 rounded-[30px] border-[1px] border-solid border-white border-opacity-[0.4] bg-transparent relative text-[16px] leading-[23px] text-white">
+              <div className="absolute top-[20px] right-[20px] ">06</div>
+              <div className="container !pt-[32px] !pb-[40px]">
+                <img
+                  className="mx-auto pb-[20px]"
+                  src={forthSectionSixthImg}
+                  alt="forthSectionSixthImg"
+                />
+                <h2 className="text-[#F26E21] text-center text-[20px] font-bold leading-[28px] pb-[20px]">
+                  {t('forthSectionTitle6')}
+                </h2>
+                <p className="text-white mx-auto px-[20px] text-center text-[16px] font-normal leading-[23px]">
+                  {t('forthSectionContent6')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -807,7 +1133,7 @@ export default function HomePage() {
       >
         <div className="container">
           <div className="flex flex-col lg:flex-row justify-start items-center lg:justify-between">
-            <div className="w-full lg:w-[53%] mt-0 lg:mt-[31px]">
+            <div className="w-full lg:w-[60%] mt-0 lg:mt-[31px]">
               <h2 className="text-white text-[18px]  lg:text-[24px] font-bold leading-[26px] lg:leading-[52px]  ">
                 {t('fifthSectionHeader1')}
               </h2>

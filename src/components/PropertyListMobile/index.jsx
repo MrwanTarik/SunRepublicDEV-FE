@@ -8,6 +8,7 @@ import PropertyService from '../../services/PropertyService';
 import classes from './styles.module.scss';
 
 export default function PropertyListMobile({
+  buildType,
   title,
   searchKey,
   queryName,
@@ -25,7 +26,7 @@ export default function PropertyListMobile({
   action,
   searchTerm,
   titleTwo,
-   ppid
+  ppid,
 }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [pageCount, setPageCount] = useState(5);
@@ -116,11 +117,19 @@ export default function PropertyListMobile({
           <div className={classes.inner}>
             {data &&
               data?.rows.map((property) => {
-                return (
-                  <li key={property.id}>
-                    <Property isFetching={isFetching} propertyData={property} />
-                  </li>
-                );
+                if (!buildType || property.buildingType === buildType) {
+                  // Only render the <li> element if the condition is true
+                  return (
+                    <li key={property.id}>
+                      <Property
+                        isFetching={isFetching}
+                        propertyData={property}
+                        // propertyWidth={propertyWidth}
+                        // propertyCount={data?.rows?.length}
+                      />
+                    </li>
+                  );
+                }
               })}
           </div>
         </ul>

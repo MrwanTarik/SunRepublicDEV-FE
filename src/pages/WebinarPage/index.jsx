@@ -10,10 +10,10 @@ import webinarFourthIcon from '../../assets/images/webinar-fourth-icon.png';
 const Webinar = () => {
   return (
     <div>
-      <div className="ds min-h-[80vh] bg-cover bg-no-repeat ">
-        <div className="container pt-[60px] lg:pt-[113px] ">
+      <div className="ds bg-cover bg-no-repeat ">
+        <div className="container pt-[60px] lg:pt-[80px] ">
           <div className="flex flex-col lg:flex-row lg:items-end ">
-            <div className="w-full lg:max-w-[57%] pb-[40px]  lg:pb-[77px]">
+            <div className="w-full lg:w-[45%] pb-[40px]  lg:pb-[77px]">
               <h2 className="text-[40px] pt-[50px] lg:pt-0 text-white font-extrabold">
                 {t('webinarTextOne')}
               </h2>
@@ -59,12 +59,11 @@ const Webinar = () => {
                 {t('webinarButton')}
               </button>
             </div>
-            <div className="pt-[50px] lg:pt-0">
-              <img src={BrsImage} alt="BrsImage" />
+            <div className="pt-[50px] lg:w-[55%]  lg:pt-0">
+              <img className='w-full' src={BrsImage} alt="BrsImage" />
             </div>
           </div>
         </div>
-        <div className="h-[10px] bg-[#2B2724]"></div>
       </div>
     </div>
   );

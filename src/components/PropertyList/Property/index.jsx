@@ -8,19 +8,17 @@ import Button from '../../Button';
 import { STATIC_URL } from '../../../constants/main';
 import classes from './styles.module.scss';
 import { FiChevronLeft } from 'react-icons/fi';
-import priceImg from '../../../assets/images/Price.png'
+import priceImg from '../../../assets/images/Price.png';
 export default function Property({
   propertyWidth,
   propertyCount,
   propertyData,
 }) {
-  console.log(propertyData)
   const navigate = useNavigate();
-  
+
   let { title } = propertyData;
   let { description } = propertyData;
   let { price } = propertyData;
-  
   if (i18n.language === 'en') {
     title = propertyData.title || propertyData.titleRus;
     description = propertyData.description || propertyData.descriptionRus;
@@ -36,13 +34,14 @@ export default function Property({
     <div
       className={classes.Property}
       style={{
-        width: propertyCount >= 0 ? propertyWidth : '', height : "100%"
+        width: propertyCount >= 0 ? propertyWidth : '',
+        height: '100%',
       }}
     >
       <div className={classes.price}>
-          <img src={priceImg} alt="" />
-          <span>{price.toLocaleString('en-US')} £</span>
-        </div>
+        <img src={priceImg} alt="" />
+        <span>{price.toLocaleString('en-US')} £</span>
+      </div>
       <header
         style={{
           position: 'relative',
@@ -51,7 +50,6 @@ export default function Property({
         }}
         onClick={() => navigate(`/property/${propertyData.id}`)}
       >
-        
         <img src={`${STATIC_URL}${propertyData.Images?.[0]?.path}`} alt="" />
         <Button onClick={() => navigate(`/property/${propertyData.id}`)}>
           <p>
