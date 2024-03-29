@@ -9,6 +9,7 @@ import PropertyService from '../../services/PropertyService';
 import classes from './styles.module.scss';
 
 export default function PropertyList({
+  buildType,
   title,
   filtersRef,
   searchKey,
@@ -27,10 +28,10 @@ export default function PropertyList({
   action,
   searchTerm,
   titleTwo,
-  ppid
+  ppid,
 }) {
   const [page, setPage] = useState(0);
-
+  // console.log(buildingType);
   const { width } = useResizeObserver(filtersRef);
 
   const propertyWidth = (width - 40) / 3;
@@ -120,16 +121,19 @@ export default function PropertyList({
               data?.rows.map((property) => {
                 if (window.location.pathname.split('/')[2] === property.id)
                   return false;
-                return (
-                  <li key={property.id}>
-                    <Property
-                      isFetching={isFetching}
-                      propertyData={property}
-                      propertyWidth={propertyWidth}
-                      propertyCount={data?.rows?.length}
-                    />
-                  </li>
-                );
+                if (!buildType || property.buildingType === buildType) {
+                  // Only render the <li> element if the condition is true
+                  return (
+                    <li key={property.id}>
+                      <Property
+                        isFetching={isFetching}
+                        propertyData={property}
+                        propertyWidth={propertyWidth}
+                        propertyCount={data?.rows?.length}
+                      />
+                    </li>
+                  );
+                }
               })}
           </div>
         </ul>

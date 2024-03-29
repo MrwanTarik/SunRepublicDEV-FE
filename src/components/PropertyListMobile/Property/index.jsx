@@ -11,7 +11,7 @@ import priceImg from '../../../assets/images/Price.png'
 
 export default function Property({ propertyData }) {
   const navigate = useNavigate();
-  console.log(propertyData)
+  // console.log(propertyData)
   let { title } = propertyData;
   let { description } = propertyData;
   let { price } = propertyData;

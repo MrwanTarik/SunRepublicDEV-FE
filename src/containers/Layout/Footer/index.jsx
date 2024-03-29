@@ -8,7 +8,7 @@ import facebookIcon from '../../../assets/images/facebook-icon.png';
 import whatsApp from '../../../assets/images/whatsapp-icon.png';
 export default function Footer() {
   return (
-    <div className="bg-footer bg-cover bg-no-repeat bg-center py-[36px] lg:py-[60px]">
+    <div className=" bg-[#2b2724] py-[36px] lg:py-[60px]">
       <div className="container">
         <div className="flex flex-col gap-y-[20px] justify-between items-center lg:flex-row ">
           <div className="w-full text-center sm:text-start sm:w-[48%] lg:w-[30.8%]">
@@ -28,23 +28,40 @@ export default function Footer() {
               Samsun Bulvari Iskele, 9985
             </p>
 
-            <p className="text-white text-[16px] leading-[23px] font-bold mb-[32px] lg:mb-[22px]">
+            <a
+              href="tel:+905338457788"
+              className="text-white text-center text-[16px] leading-[23px] font-bold mb-[32px] lg:mb-[22px]"
+            >
               +90 533 845 7788
-            </p>
+            </a>
           </div>
           <div className="w-full sm:w-[48%] lg:w-[30.8%]">
             <div className="flex gap-x-0 sm:gap-x-[15px] justify-center">
-              <Link className="flex justify-center" to="/">
+              <Link
+                className="flex justify-center"
+                to="https://www.instagram.com/sunrepublic.vip/"
+              >
                 <img src={instaIcon} alt="" />
               </Link>
-              <Link className="flex justify-center" to="/">
+              <Link
+                className="flex justify-center"
+                to="https://www.facebook.com/sunrepublic.vip/"
+              >
                 <img src={facebookIcon} alt="" />
               </Link>
-              <Link className="flex justify-center" to="/">
+              <Link
+                className="flex justify-center"
+                to="https://www.youtube.com/@sun_republic"
+              >
                 <img src={youtubeIcon} alt="" />
               </Link>
-              <Link className="flex justify-center" to="/">
-                <img src={whatsApp} alt="" />
+              <Link
+                className="flex justify-center"
+                to={
+                  'https://api.whatsapp.com/send/?phone=905338457788&text&type=phone_number&app_absent=0'
+                }
+              >
+                <img src={whatsApp} alt="whatsApp" />
               </Link>
             </div>
           </div>

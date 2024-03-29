@@ -46,7 +46,7 @@ export default function WhatWeSellPage() {
           <div className={classes.container}>
             <div
               className={classes.sliderImgs}
-              style={{ position: 'fixed', right: '0px', top: '120px' }}
+              style={{ position: 'fixed', right: '0px', top: '15px' }}
             >
               <div
                 style={{

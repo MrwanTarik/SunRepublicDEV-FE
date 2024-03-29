@@ -26,7 +26,7 @@ export default function AboutPage() {
                 <>{t('aboutHeader')}</>
               ) : (
                 <>
-                  {t('aboutHeader')} <span>Sun </span> {t('aboutHeaderTwo')}
+                  {t('aboutHeader')} <span>Sun </span> 
                 </>
               )}
             </h1>

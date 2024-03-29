@@ -109,7 +109,7 @@ export default function ContactUsPage() {
               </Link>
               <Link
                 target="_blank"
-                to={'https://www.youtube.com/c/IrinDrealty'}
+                to={'https://www.youtube.com/@sun_republic'}
               >
                 <img src={youtubeIcon} alt="youtube icon" />
               </Link>
